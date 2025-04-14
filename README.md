@@ -220,7 +220,20 @@ The DAG runs the DBT CLI inside the container and builds models in the correct o
 
 ### 6. Looker Studio
 
+### Dashboard Presentation
+![Map Image](img/my_dashboard.png)
+
+Link to dashboard: https://lookerstudio.google.com/reporting/4b22d87f-0b0e-44a9-b03e-caf207fd31d5
+
+At the end, I present my dashboard, which shows:
+
+- **Which airports had the most delayed flights.**
+- **The number of flights per month from 1987 to 1992.**
+
+The dashboard allows for the analysis of data based on various parameters, such as delay times and the total number of flights within a specific period, helping to better understand the patterns of delays and the overall flight traffic during these years.
+
 Once the data has been processed and stored in BigQuery, you can create interactive visualizations using **Looker Studio**.
+
 
 #### Steps to Create a Dashboard:
 
@@ -242,7 +255,8 @@ Once the data has been processed and stored in BigQuery, you can create interact
      - **Year**: YEAR(flight_date) — to extract the year of the flight from the flight_date field.
      - **Month**: MONTH(flight_date) — to extract the month of the flight from the flight_date field.
 
-![Map Image](img/my_dashboard.png)
+
+
 
 
 
