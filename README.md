@@ -102,16 +102,15 @@ credentials_file = "gcs-key.json"
 bucket_name      = "<your-bucket-name>"
 dataset_id       = "<your-dataset-id>"
 cluster_name     = "<your-cluster-name>"
+```
 
 Run the following commands from inside the terraform/ directory:
+```bash
 terraform init
 terraform plan
 terraform apply
+```
 
-
-### **3. `dataset_download.md`**
-
-```markdown
 ### 3. Downloading the Dataset
 
 The dataset used in this project is publicly available on the Harvard Dataverse platform:
@@ -138,15 +137,8 @@ However, **direct download links are not available** via API or scripts. Therefo
    You can do this manually using the GCP Console or via the `gsutil` CLI. For example:
 
    ```bash
-   gsutil cp <path-to-local-csv-file> gs://<your-bucket-name>/raw/
-
-
-    In addition to the flight data, the carriers.csv file must also be downloaded from the same dataset page:
-
-    Once downloaded, upload carriers.csv to the seeds/ folder in your GCS bucket:
-    ```bash
-    gsutil cp carriers.csv gs://<your-bucket-name>/seeds/
-
+    gsutil cp <path-to-local-csv-file> gs://<your-bucket-name>/raw/
+   ```
 
 ### **4. `airflow_setup.md`**
 
