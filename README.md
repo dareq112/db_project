@@ -146,7 +146,7 @@ Before running Airflow, make sure to configure the appropriate environment varia
 
 #### Required Environment Variables
 
-Inside your `docker-compose.yaml`, under the appropriate Airflow service (e.g., `webserver`, `scheduler`, `worker`), set the following:
+Inside your `docker-compose.yaml`, set the following:
 
 ```yaml
 environment:
@@ -160,17 +160,16 @@ Replace <your-project-id> and <your-gcs-bucket-name> with your actual project an
 
 Build the Airflow Docker Image
 Once the environment variables are set, build the Airflow image using:
-```bash
-   docker-compose build
-```
+    ```bash
+    docker-compose build
+    ```
 Run Airflow
 To start the Airflow services, run:
 ```bash
-    docker-compose up
-This will launch the Airflow webserver, scheduler, and any other defined services. You should be able to access the Airflow UI at http://localhost:8080.
+docker-compose up
 ```
+This will launch the Airflow webserver, scheduler, and any other defined services. You should be able to access the Airflow UI at http://localhost:8080.
 
-```markdown
 ### Airflow & DBT Workflow
 
 Once the infrastructure is deployed and raw data is uploaded to GCS, the data pipeline is orchestrated using **Airflow** with multiple DAGs handling each stage of the process.
