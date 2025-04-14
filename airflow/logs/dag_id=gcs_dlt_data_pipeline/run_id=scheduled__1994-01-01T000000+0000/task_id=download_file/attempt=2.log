@@ -1,0 +1,22 @@
+[2025-04-13T19:53:33.353+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-13T19:53:35.319+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: gcs_dlt_data_pipeline.download_file scheduled__1994-01-01T00:00:00+00:00 [queued]>
+[2025-04-13T19:53:35.523+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: gcs_dlt_data_pipeline.download_file scheduled__1994-01-01T00:00:00+00:00 [queued]>
+[2025-04-13T19:53:35.528+0000] {taskinstance.py:2867} INFO - Starting attempt 2 of 2
+[2025-04-13T19:53:36.927+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): download_file> on 1994-01-01 00:00:00+00:00
+[2025-04-13T19:53:37.849+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=273) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-04-13T19:53:37.913+0000] {standard_task_runner.py:72} INFO - Started process 299 to run task
+[2025-04-13T19:53:38.006+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'gcs_dlt_data_pipeline', 'download_file', 'scheduled__1994-01-01T00:00:00+00:00', '--job-id', '204', '--raw', '--subdir', 'DAGS_FOLDER/first_stage/first_stage.py', '--cfg-path', '/tmp/tmp5dopgthi']
+[2025-04-13T19:53:38.029+0000] {standard_task_runner.py:105} INFO - Job 204: Subtask download_file
+[2025-04-13T19:53:39.954+0000] {task_command.py:467} INFO - Running <TaskInstance: gcs_dlt_data_pipeline.download_file scheduled__1994-01-01T00:00:00+00:00 [running]> on host 0728476a73c7
+[2025-04-13T19:53:45.273+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='gcs_dlt_data_pipeline' AIRFLOW_CTX_TASK_ID='download_file' AIRFLOW_CTX_EXECUTION_DATE='1994-01-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__1994-01-01T00:00:00+00:00'
+[2025-04-13T19:53:45.268+0000] {job.py:229} INFO - Heartbeat recovered after 14.92 seconds
+[2025-04-13T19:53:45.293+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-13T19:53:45.755+0000] {logging_mixin.py:190} INFO - Source File Path: raw/1994.csv.bz2
+[2025-04-13T19:53:45.766+0000] {logging_mixin.py:190} INFO - Destination File Path: /tmp/1994.csv.bz2
+[2025-04-13T19:53:45.846+0000] {logging_mixin.py:190} INFO - Downloading raw/1994.csv.bz2 from bucket db_project_data_bucket to /tmp/1994.csv.bz2
+[2025-04-13T19:55:06.245+0000] {logging_mixin.py:190} INFO - Downloaded db_project_data_bucket/raw/1994.csv.bz2 to /tmp/1994.csv.bz2
+[2025-04-13T19:56:20.873+0000] {job.py:229} INFO - Heartbeat recovered after 26.11 seconds
+[2025-04-13T19:56:33.233+0000] {job.py:229} INFO - Heartbeat recovered after 12.39 seconds
+[2025-04-13T19:57:14.561+0000] {local_task_job_runner.py:266} INFO - Task exited with return code -9. For more information, see https://***.apache.org/docs/apache-***/stable/troubleshooting.html#LocalTaskJob-killed
+[2025-04-13T19:57:15.117+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-13T19:57:15.134+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

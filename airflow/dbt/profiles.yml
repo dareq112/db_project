@@ -1,0 +1,10 @@
+my_profile:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      project: 'db-project-456518'
+      dataset: 'db_project_dataset'
+      threads: 1
+      keyfile: '/opt/airflow/config/gcp-key.json'
+      method: service-account  # Explicitly mention the authentication method

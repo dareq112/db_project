@@ -1,0 +1,28 @@
+[2025-04-14T14:30:40.515+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-14T14:30:40.534+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dbt_airflow_example.run_dbt_staging manual__2025-04-14T14:21:35.452685+00:00 [queued]>
+[2025-04-14T14:30:40.544+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dbt_airflow_example.run_dbt_staging manual__2025-04-14T14:21:35.452685+00:00 [queued]>
+[2025-04-14T14:30:40.545+0000] {taskinstance.py:2867} INFO - Starting attempt 6 of 7
+[2025-04-14T14:30:40.560+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): run_dbt_staging> on 2025-04-14 14:21:35.452685+00:00
+[2025-04-14T14:30:40.568+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dbt_***_example', 'run_dbt_staging', 'manual__2025-04-14T14:21:35.452685+00:00', '--job-id', '460', '--raw', '--subdir', 'DAGS_FOLDER/run_dbt_model.py', '--cfg-path', '/tmp/tmpv5cy49sp']
+[2025-04-14T14:30:40.571+0000] {standard_task_runner.py:105} INFO - Job 460: Subtask run_dbt_staging
+[2025-04-14T14:30:40.572+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=4374) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-04-14T14:30:40.573+0000] {standard_task_runner.py:72} INFO - Started process 4375 to run task
+[2025-04-14T14:30:40.620+0000] {task_command.py:467} INFO - Running <TaskInstance: dbt_airflow_example.run_dbt_staging manual__2025-04-14T14:21:35.452685+00:00 [running]> on host b7be566335ce
+[2025-04-14T14:30:40.703+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dbt_***_example' AIRFLOW_CTX_TASK_ID='run_dbt_staging' AIRFLOW_CTX_EXECUTION_DATE='2025-04-14T14:21:35.452685+00:00' AIRFLOW_CTX_TRY_NUMBER='6' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-14T14:21:35.452685+00:00'
+[2025-04-14T14:30:40.705+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-14T14:30:40.720+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-04-14T14:30:40.722+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/dbt && dbt run --models stg_flights']
+[2025-04-14T14:30:40.730+0000] {subprocess.py:99} INFO - Output:
+[2025-04-14T14:30:45.101+0000] {subprocess.py:106} INFO - [0m14:30:45  Running with dbt=1.7.9
+[2025-04-14T14:30:47.264+0000] {subprocess.py:106} INFO - [0m14:30:47  Registered adapter: bigquery=1.7.9
+[2025-04-14T14:30:47.294+0000] {subprocess.py:106} INFO - [0m14:30:47  Unable to do partial parsing because saved manifest not found. Starting full parse.
+[2025-04-14T14:30:49.617+0000] {subprocess.py:106} INFO - [0m14:30:49  Found 2 models, 1 source, 0 exposures, 0 metrics, 454 macros, 0 groups, 0 semantic models
+[2025-04-14T14:30:49.621+0000] {subprocess.py:106} INFO - [0m14:30:49  The selection criterion 'stg_flights' does not match any nodes
+[2025-04-14T14:30:49.626+0000] {subprocess.py:106} INFO - [0m14:30:49
+[2025-04-14T14:30:49.628+0000] {subprocess.py:106} INFO - [0m14:30:49  Nothing to do. Try checking your model configs and model specification args
+[2025-04-14T14:30:51.313+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-04-14T14:30:51.378+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-14T14:30:51.379+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=dbt_***_example, task_id=run_dbt_staging, run_id=manual__2025-04-14T14:21:35.452685+00:00, execution_date=20250414T142135, start_date=20250414T143040, end_date=20250414T143051
+[2025-04-14T14:30:51.470+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-14T14:30:51.487+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-14T14:30:51.489+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

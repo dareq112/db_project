@@ -1,0 +1,14 @@
+# === PySpark (Spark for Python) ===
+pyspark==3.5.2  # Match the version with your Spark cluster (e.g., Dataproc)
+
+# === DBT (Data Build Tool) ===
+dbt-core==1.8.1  # Latest stable version
+dbt-bigquery==1.8.1  # Or use dbt-postgres, dbt-snowflake etc. based on your backend
+
+# Optional: Useful Airflow extras
+apache-airflow-providers-google==15.0.1 # if working with BigQuery, GCS etc.
+apache-airflow-providers-dbt-cloud==2.0.0  # if using DBT Cloud operator (optional)
+
+# Optional: Dev tools
+pandas
+pyarrow

@@ -1,0 +1,22 @@
+[2025-04-13T20:10:15.184+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-13T20:10:15.203+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: gcs_dlt_data_pipeline.download_file scheduled__1987-01-01T00:00:00+00:00 [queued]>
+[2025-04-13T20:10:15.212+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: gcs_dlt_data_pipeline.download_file scheduled__1987-01-01T00:00:00+00:00 [queued]>
+[2025-04-13T20:10:15.213+0000] {taskinstance.py:2867} INFO - Starting attempt 25 of 26
+[2025-04-13T20:10:15.226+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): download_file> on 1987-01-01 00:00:00+00:00
+[2025-04-13T20:10:15.235+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'gcs_dlt_data_pipeline', 'download_file', 'scheduled__1987-01-01T00:00:00+00:00', '--job-id', '224', '--raw', '--subdir', 'DAGS_FOLDER/first_stage/first_stage.py', '--cfg-path', '/tmp/tmp1wx_ks0n']
+[2025-04-13T20:10:15.237+0000] {standard_task_runner.py:105} INFO - Job 224: Subtask download_file
+[2025-04-13T20:10:15.239+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=315) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-04-13T20:10:15.240+0000] {standard_task_runner.py:72} INFO - Started process 320 to run task
+[2025-04-13T20:10:15.300+0000] {task_command.py:467} INFO - Running <TaskInstance: gcs_dlt_data_pipeline.download_file scheduled__1987-01-01T00:00:00+00:00 [running]> on host 7f7577d1d274
+[2025-04-13T20:10:15.400+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='gcs_dlt_data_pipeline' AIRFLOW_CTX_TASK_ID='download_file' AIRFLOW_CTX_EXECUTION_DATE='1987-01-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='25' AIRFLOW_CTX_DAG_RUN_ID='scheduled__1987-01-01T00:00:00+00:00'
+[2025-04-13T20:10:15.402+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-13T20:10:15.424+0000] {logging_mixin.py:190} INFO - Source File Path: raw/1987.csv.bz2
+[2025-04-13T20:10:15.424+0000] {logging_mixin.py:190} INFO - Destination File Path: /tmp/1987.csv.bz2
+[2025-04-13T20:10:15.425+0000] {logging_mixin.py:190} INFO - Downloading raw/1987.csv.bz2 from bucket db_project_data_bucket to /tmp/1987.csv.bz2
+[2025-04-13T20:10:16.640+0000] {logging_mixin.py:190} INFO - Downloaded db_project_data_bucket/raw/1987.csv.bz2 to /tmp/1987.csv.bz2
+[2025-04-13T20:10:24.133+0000] {python.py:240} INFO - Done. Returned value was: /tmp/1987.csv
+[2025-04-13T20:10:24.198+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-13T20:10:24.199+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=gcs_dlt_data_pipeline, task_id=download_file, run_id=scheduled__1987-01-01T00:00:00+00:00, execution_date=19870101T000000, start_date=20250413T201015, end_date=20250413T201024
+[2025-04-13T20:10:24.277+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-13T20:10:24.325+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-04-13T20:10:24.328+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

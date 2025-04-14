@@ -1,0 +1,35 @@
+[2025-04-13T19:31:25.817+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-13T19:31:25.849+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: gcs_dlt_data_pipeline.download_file scheduled__1987-01-01T00:00:00+00:00 [queued]>
+[2025-04-13T19:31:25.864+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: gcs_dlt_data_pipeline.download_file scheduled__1987-01-01T00:00:00+00:00 [queued]>
+[2025-04-13T19:31:25.865+0000] {taskinstance.py:2867} INFO - Starting attempt 22 of 23
+[2025-04-13T19:31:25.893+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): download_file> on 1987-01-01 00:00:00+00:00
+[2025-04-13T19:31:25.907+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'gcs_dlt_data_pipeline', 'download_file', 'scheduled__1987-01-01T00:00:00+00:00', '--job-id', '160', '--raw', '--subdir', 'DAGS_FOLDER/first_stage/first_stage.py', '--cfg-path', '/tmp/tmp0e6isqi5']
+[2025-04-13T19:31:25.912+0000] {standard_task_runner.py:105} INFO - Job 160: Subtask download_file
+[2025-04-13T19:31:25.918+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=1202) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-04-13T19:31:25.920+0000] {standard_task_runner.py:72} INFO - Started process 1204 to run task
+[2025-04-13T19:31:26.015+0000] {task_command.py:467} INFO - Running <TaskInstance: gcs_dlt_data_pipeline.download_file scheduled__1987-01-01T00:00:00+00:00 [running]> on host 0728476a73c7
+[2025-04-13T19:31:26.235+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='gcs_dlt_data_pipeline' AIRFLOW_CTX_TASK_ID='download_file' AIRFLOW_CTX_EXECUTION_DATE='1987-01-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='22' AIRFLOW_CTX_DAG_RUN_ID='scheduled__1987-01-01T00:00:00+00:00'
+[2025-04-13T19:31:26.237+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-13T19:31:26.281+0000] {logging_mixin.py:190} INFO - Source File Path: raw/1987.csv.bz2
+[2025-04-13T19:31:26.282+0000] {logging_mixin.py:190} INFO - Destination File Path: /tmp/1987.csv.bz2
+[2025-04-13T19:31:26.283+0000] {logging_mixin.py:190} INFO - db_project_data_bucket
+[2025-04-13T19:31:27.343+0000] {logging_mixin.py:190} INFO - Downloaded db_project_data_bucket/raw/1987.csv.bz2 to /tmp/1987.csv.bz2
+[2025-04-13T19:31:49.934+0000] {python.py:240} INFO - Done. Returned value was:          Year  Month  DayofMonth  ...  NASDelay  SecurityDelay  LateAircraftDelay
+0        1987     10          14  ...       NaN            NaN                NaN
+1        1987     10          15  ...       NaN            NaN                NaN
+2        1987     10          17  ...       NaN            NaN                NaN
+3        1987     10          18  ...       NaN            NaN                NaN
+4        1987     10          19  ...       NaN            NaN                NaN
+...       ...    ...         ...  ...       ...            ...                ...
+1311821  1987     12          11  ...       NaN            NaN                NaN
+1311822  1987     12          13  ...       NaN            NaN                NaN
+1311823  1987     12          14  ...       NaN            NaN                NaN
+1311824  1987     12           1  ...       NaN            NaN                NaN
+1311825  1987     12           2  ...       NaN            NaN                NaN
+
+[1311826 rows x 29 columns]
+[2025-04-13T19:31:53.599+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-13T19:31:53.600+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=gcs_dlt_data_pipeline, task_id=download_file, run_id=scheduled__1987-01-01T00:00:00+00:00, execution_date=19870101T000000, start_date=20250413T193125, end_date=20250413T193153
+[2025-04-13T19:31:53.692+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-13T19:31:53.738+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-04-13T19:31:53.740+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

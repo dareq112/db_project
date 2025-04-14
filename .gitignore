@@ -1,0 +1,4 @@
+# Ignore Airflow config and Terraform provider files
+airflow/config/
+terraform/.terraform/
+terraform/gcp-key.json

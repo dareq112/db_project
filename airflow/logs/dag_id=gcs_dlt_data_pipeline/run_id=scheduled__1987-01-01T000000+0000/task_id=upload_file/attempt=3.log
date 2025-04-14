@@ -1,0 +1,19 @@
+[2025-04-13T19:43:17.259+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-13T19:43:17.290+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: gcs_dlt_data_pipeline.upload_file scheduled__1987-01-01T00:00:00+00:00 [queued]>
+[2025-04-13T19:43:17.305+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: gcs_dlt_data_pipeline.upload_file scheduled__1987-01-01T00:00:00+00:00 [queued]>
+[2025-04-13T19:43:17.307+0000] {taskinstance.py:2867} INFO - Starting attempt 3 of 4
+[2025-04-13T19:43:17.324+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): upload_file> on 1987-01-01 00:00:00+00:00
+[2025-04-13T19:43:17.336+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=1583) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-04-13T19:43:17.338+0000] {standard_task_runner.py:72} INFO - Started process 1585 to run task
+[2025-04-13T19:43:17.336+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'gcs_dlt_data_pipeline', 'upload_file', 'scheduled__1987-01-01T00:00:00+00:00', '--job-id', '168', '--raw', '--subdir', 'DAGS_FOLDER/first_stage/first_stage.py', '--cfg-path', '/tmp/tmpfxro5tqe']
+[2025-04-13T19:43:17.340+0000] {standard_task_runner.py:105} INFO - Job 168: Subtask upload_file
+[2025-04-13T19:43:17.408+0000] {task_command.py:467} INFO - Running <TaskInstance: gcs_dlt_data_pipeline.upload_file scheduled__1987-01-01T00:00:00+00:00 [running]> on host 0728476a73c7
+[2025-04-13T19:43:17.529+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='gcs_dlt_data_pipeline' AIRFLOW_CTX_TASK_ID='upload_file' AIRFLOW_CTX_EXECUTION_DATE='1987-01-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='scheduled__1987-01-01T00:00:00+00:00'
+[2025-04-13T19:43:17.531+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-13T19:45:43.047+0000] {logging_mixin.py:190} INFO - Uploaded /staging/1987.csv to db_project_data_bucket//tmp/1987_transformed.csv
+[2025-04-13T19:45:43.049+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-04-13T19:45:43.067+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-13T19:45:43.068+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=gcs_dlt_data_pipeline, task_id=upload_file, run_id=scheduled__1987-01-01T00:00:00+00:00, execution_date=19870101T000000, start_date=20250413T194317, end_date=20250413T194543
+[2025-04-13T19:45:43.135+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-13T19:45:43.157+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-13T19:45:43.159+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

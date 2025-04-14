@@ -1,0 +1,252 @@
+[2025-04-14T13:14:53.900+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-14T13:14:53.939+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: spark_csv_to_parquet.submit_spark_job manual__2025-04-14T08:42:22.510334+00:00 [queued]>
+[2025-04-14T13:14:53.957+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: spark_csv_to_parquet.submit_spark_job manual__2025-04-14T08:42:22.510334+00:00 [queued]>
+[2025-04-14T13:14:53.958+0000] {taskinstance.py:2867} INFO - Starting attempt 18 of 18
+[2025-04-14T13:14:53.979+0000] {taskinstance.py:2890} INFO - Executing <Task(DataprocSubmitJobOperator): submit_spark_job> on 2025-04-14 08:42:22.510334+00:00
+[2025-04-14T13:14:53.988+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'spark_csv_to_parquet', 'submit_spark_job', 'manual__2025-04-14T08:42:22.510334+00:00', '--job-id', '448', '--raw', '--subdir', 'DAGS_FOLDER/spark_job/spark_job.py', '--cfg-path', '/tmp/tmpqmt7se3a']
+[2025-04-14T13:14:53.995+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=769) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-04-14T13:14:54.006+0000] {standard_task_runner.py:105} INFO - Job 448: Subtask submit_spark_job
+[2025-04-14T13:14:54.007+0000] {standard_task_runner.py:72} INFO - Started process 776 to run task
+[2025-04-14T13:14:54.065+0000] {task_command.py:467} INFO - Running <TaskInstance: spark_csv_to_parquet.submit_spark_job manual__2025-04-14T08:42:22.510334+00:00 [running]> on host b7be566335ce
+[2025-04-14T13:14:54.154+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='spark_csv_to_parquet' AIRFLOW_CTX_TASK_ID='submit_spark_job' AIRFLOW_CTX_EXECUTION_DATE='2025-04-14T08:42:22.510334+00:00' AIRFLOW_CTX_TRY_NUMBER='18' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-14T08:42:22.510334+00:00'
+[2025-04-14T13:14:54.155+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-14T13:14:54.173+0000] {dataproc.py:2618} INFO - Submitting job
+[2025-04-14T13:14:54.176+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2025-04-14T13:14:54.176+0000] {connection.py:277} WARNING - Connection schemes (type: google_cloud) shall not contain '_' according to RFC3986.
+[2025-04-14T13:14:54.177+0000] {base.py:84} INFO - Retrieving connection 'google_cloud_default'
+[2025-04-14T13:14:54.554+0000] {dataproc.py:2630} INFO - Job 14328bcd-6eba-4a7b-a355-769bcd9e5879 submitted successfully.
+[2025-04-14T13:14:54.574+0000] {dataproc.py:2665} INFO - Waiting for job 14328bcd-6eba-4a7b-a355-769bcd9e5879 to complete
+[2025-04-14T13:15:25.200+0000] {taskinstance.py:3313} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/google/cloud/operators/dataproc.py", line 2666, in execute
+    self.hook.wait_for_job(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/google/common/hooks/base_google.py", line 560, in inner_wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/google/cloud/hooks/dataproc.py", line 861, in wait_for_job
+    raise AirflowException(f"Job failed:\n{job}")
+airflow.exceptions.AirflowException: Job failed:
+reference {
+  project_id: "db-project-456518"
+  job_id: "14328bcd-6eba-4a7b-a355-769bcd9e5879"
+}
+placement {
+  cluster_name: "db-project-dataproc-cluster"
+  cluster_uuid: "fbba43c0-2ff2-4103-a737-7b2688957d54"
+}
+pyspark_job {
+  main_python_file_uri: "gs://db_project_data_bucket/code/main_spark.py"
+}
+status {
+  state: ERROR
+  details: "Google Cloud Dataproc Agent reports job failure. If logs are available, they can be found at:\nhttps://console.cloud.google.com/dataproc/jobs/14328bcd-6eba-4a7b-a355-769bcd9e5879?project=db-project-456518&region=europe-central2\ngcloud dataproc jobs wait \'14328bcd-6eba-4a7b-a355-769bcd9e5879\' --region \'europe-central2\' --project \'db-project-456518\'\nhttps://console.cloud.google.com/storage/browser/dataproc-staging-europe-central2-1014201654849-u6eckw91/google-cloud-dataproc-metainfo/fbba43c0-2ff2-4103-a737-7b2688957d54/jobs/14328bcd-6eba-4a7b-a355-769bcd9e5879/\ngs://dataproc-staging-europe-central2-1014201654849-u6eckw91/google-cloud-dataproc-metainfo/fbba43c0-2ff2-4103-a737-7b2688957d54/jobs/14328bcd-6eba-4a7b-a355-769bcd9e5879/driveroutput.*"
+  state_start_time {
+    seconds: 1744636514
+    nanos: 330384000
+  }
+}
+status_history {
+  state: PENDING
+  state_start_time {
+    seconds: 1744636490
+    nanos: 963310000
+  }
+}
+status_history {
+  state: SETUP_DONE
+  state_start_time {
+    seconds: 1744636490
+    nanos: 983267000
+  }
+}
+status_history {
+  state: RUNNING
+  state_start_time {
+    seconds: 1744636491
+    nanos: 146070000
+  }
+}
+yarn_applications {
+  name: "Transform the data from GCS and save to BigQuery"
+  state: FINISHED
+  progress: 1
+  tracking_url: "http://db-project-dataproc-cluster-m.local.:8088/proxy/application_1744554812080_0016/"
+}
+driver_output_resource_uri: "gs://dataproc-staging-europe-central2-1014201654849-u6eckw91/google-cloud-dataproc-metainfo/fbba43c0-2ff2-4103-a737-7b2688957d54/jobs/14328bcd-6eba-4a7b-a355-769bcd9e5879/driveroutput"
+driver_control_files_uri: "gs://dataproc-staging-europe-central2-1014201654849-u6eckw91/google-cloud-dataproc-metainfo/fbba43c0-2ff2-4103-a737-7b2688957d54/jobs/14328bcd-6eba-4a7b-a355-769bcd9e5879/"
+job_uuid: "14328bcd-6eba-4a7b-a355-769bcd9e5879"
+done: true
+
+[2025-04-14T13:15:25.209+0000] {taskinstance.py:1226} INFO - Marking task as FAILED. dag_id=spark_csv_to_parquet, task_id=submit_spark_job, run_id=manual__2025-04-14T08:42:22.510334+00:00, execution_date=20250414T084222, start_date=20250414T131453, end_date=20250414T131525
+[2025-04-14T13:15:25.252+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-14T13:15:25.253+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 448 for task submit_spark_job (Job failed:
+reference {
+  project_id: "db-project-456518"
+  job_id: "14328bcd-6eba-4a7b-a355-769bcd9e5879"
+}
+placement {
+  cluster_name: "db-project-dataproc-cluster"
+  cluster_uuid: "fbba43c0-2ff2-4103-a737-7b2688957d54"
+}
+pyspark_job {
+  main_python_file_uri: "gs://db_project_data_bucket/code/main_spark.py"
+}
+status {
+  state: ERROR
+  details: "Google Cloud Dataproc Agent reports job failure. If logs are available, they can be found at:\nhttps://console.cloud.google.com/dataproc/jobs/14328bcd-6eba-4a7b-a355-769bcd9e5879?project=db-project-456518&region=europe-central2\ngcloud dataproc jobs wait \'14328bcd-6eba-4a7b-a355-769bcd9e5879\' --region \'europe-central2\' --project \'db-project-456518\'\nhttps://console.cloud.google.com/storage/browser/dataproc-staging-europe-central2-1014201654849-u6eckw91/google-cloud-dataproc-metainfo/fbba43c0-2ff2-4103-a737-7b2688957d54/jobs/14328bcd-6eba-4a7b-a355-769bcd9e5879/\ngs://dataproc-staging-europe-central2-1014201654849-u6eckw91/google-cloud-dataproc-metainfo/fbba43c0-2ff2-4103-a737-7b2688957d54/jobs/14328bcd-6eba-4a7b-a355-769bcd9e5879/driveroutput.*"
+  state_start_time {
+    seconds: 1744636514
+    nanos: 330384000
+  }
+}
+status_history {
+  state: PENDING
+  state_start_time {
+    seconds: 1744636490
+    nanos: 963310000
+  }
+}
+status_history {
+  state: SETUP_DONE
+  state_start_time {
+    seconds: 1744636490
+    nanos: 983267000
+  }
+}
+status_history {
+  state: RUNNING
+  state_start_time {
+    seconds: 1744636491
+    nanos: 146070000
+  }
+}
+yarn_applications {
+  name: "Transform the data from GCS and save to BigQuery"
+  state: FINISHED
+  progress: 1
+  tracking_url: "http://db-project-dataproc-cluster-m.local.:8088/proxy/application_1744554812080_0016/"
+}
+driver_output_resource_uri: "gs://dataproc-staging-europe-central2-1014201654849-u6eckw91/google-cloud-dataproc-metainfo/fbba43c0-2ff2-4103-a737-7b2688957d54/jobs/14328bcd-6eba-4a7b-a355-769bcd9e5879/driveroutput"
+driver_control_files_uri: "gs://dataproc-staging-europe-central2-1014201654849-u6eckw91/google-cloud-dataproc-metainfo/fbba43c0-2ff2-4103-a737-7b2688957d54/jobs/14328bcd-6eba-4a7b-a355-769bcd9e5879/"
+job_uuid: "14328bcd-6eba-4a7b-a355-769bcd9e5879"
+done: true
+; 776)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3006, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 274, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3161, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3185, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/google/cloud/operators/dataproc.py", line 2666, in execute
+    self.hook.wait_for_job(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/google/common/hooks/base_google.py", line 560, in inner_wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/google/cloud/hooks/dataproc.py", line 861, in wait_for_job
+    raise AirflowException(f"Job failed:\n{job}")
+airflow.exceptions.AirflowException: Job failed:
+reference {
+  project_id: "db-project-456518"
+  job_id: "14328bcd-6eba-4a7b-a355-769bcd9e5879"
+}
+placement {
+  cluster_name: "db-project-dataproc-cluster"
+  cluster_uuid: "fbba43c0-2ff2-4103-a737-7b2688957d54"
+}
+pyspark_job {
+  main_python_file_uri: "gs://db_project_data_bucket/code/main_spark.py"
+}
+status {
+  state: ERROR
+  details: "Google Cloud Dataproc Agent reports job failure. If logs are available, they can be found at:\nhttps://console.cloud.google.com/dataproc/jobs/14328bcd-6eba-4a7b-a355-769bcd9e5879?project=db-project-456518&region=europe-central2\ngcloud dataproc jobs wait \'14328bcd-6eba-4a7b-a355-769bcd9e5879\' --region \'europe-central2\' --project \'db-project-456518\'\nhttps://console.cloud.google.com/storage/browser/dataproc-staging-europe-central2-1014201654849-u6eckw91/google-cloud-dataproc-metainfo/fbba43c0-2ff2-4103-a737-7b2688957d54/jobs/14328bcd-6eba-4a7b-a355-769bcd9e5879/\ngs://dataproc-staging-europe-central2-1014201654849-u6eckw91/google-cloud-dataproc-metainfo/fbba43c0-2ff2-4103-a737-7b2688957d54/jobs/14328bcd-6eba-4a7b-a355-769bcd9e5879/driveroutput.*"
+  state_start_time {
+    seconds: 1744636514
+    nanos: 330384000
+  }
+}
+status_history {
+  state: PENDING
+  state_start_time {
+    seconds: 1744636490
+    nanos: 963310000
+  }
+}
+status_history {
+  state: SETUP_DONE
+  state_start_time {
+    seconds: 1744636490
+    nanos: 983267000
+  }
+}
+status_history {
+  state: RUNNING
+  state_start_time {
+    seconds: 1744636491
+    nanos: 146070000
+  }
+}
+yarn_applications {
+  name: "Transform the data from GCS and save to BigQuery"
+  state: FINISHED
+  progress: 1
+  tracking_url: "http://db-project-dataproc-cluster-m.local.:8088/proxy/application_1744554812080_0016/"
+}
+driver_output_resource_uri: "gs://dataproc-staging-europe-central2-1014201654849-u6eckw91/google-cloud-dataproc-metainfo/fbba43c0-2ff2-4103-a737-7b2688957d54/jobs/14328bcd-6eba-4a7b-a355-769bcd9e5879/driveroutput"
+driver_control_files_uri: "gs://dataproc-staging-europe-central2-1014201654849-u6eckw91/google-cloud-dataproc-metainfo/fbba43c0-2ff2-4103-a737-7b2688957d54/jobs/14328bcd-6eba-4a7b-a355-769bcd9e5879/"
+job_uuid: "14328bcd-6eba-4a7b-a355-769bcd9e5879"
+done: true
+
+[2025-04-14T13:15:25.308+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-04-14T13:15:25.335+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-14T13:15:25.338+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

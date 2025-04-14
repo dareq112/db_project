@@ -1,0 +1,109 @@
+[2025-04-14T16:41:18.041+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-14T16:41:18.069+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dbt_airflow.run_dbt_core manual__2025-04-14T15:18:53.940263+00:00 [queued]>
+[2025-04-14T16:41:18.082+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dbt_airflow.run_dbt_core manual__2025-04-14T15:18:53.940263+00:00 [queued]>
+[2025-04-14T16:41:18.083+0000] {taskinstance.py:2867} INFO - Starting attempt 2 of 3
+[2025-04-14T16:41:18.098+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): run_dbt_core> on 2025-04-14 15:18:53.940263+00:00
+[2025-04-14T16:41:18.110+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=11538) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-04-14T16:41:18.114+0000] {standard_task_runner.py:72} INFO - Started process 11539 to run task
+[2025-04-14T16:41:18.110+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dbt_***', 'run_dbt_core', 'manual__2025-04-14T15:18:53.940263+00:00', '--job-id', '491', '--raw', '--subdir', 'DAGS_FOLDER/run_dbt_model.py', '--cfg-path', '/tmp/tmppsj_mztg']
+[2025-04-14T16:41:18.115+0000] {standard_task_runner.py:105} INFO - Job 491: Subtask run_dbt_core
+[2025-04-14T16:41:18.182+0000] {task_command.py:467} INFO - Running <TaskInstance: dbt_airflow.run_dbt_core manual__2025-04-14T15:18:53.940263+00:00 [running]> on host b7be566335ce
+[2025-04-14T16:41:18.282+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dbt_***' AIRFLOW_CTX_TASK_ID='run_dbt_core' AIRFLOW_CTX_EXECUTION_DATE='2025-04-14T15:18:53.940263+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-14T15:18:53.940263+00:00'
+[2025-04-14T16:41:18.283+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-14T16:41:18.301+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-04-14T16:41:18.303+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/dbt && dbt run --models core_flights']
+[2025-04-14T16:41:18.319+0000] {subprocess.py:99} INFO - Output:
+[2025-04-14T16:41:22.422+0000] {subprocess.py:106} INFO - [0m16:41:22  Running with dbt=1.7.9
+[2025-04-14T16:41:24.037+0000] {subprocess.py:106} INFO - [0m16:41:24  Registered adapter: bigquery=1.7.9
+[2025-04-14T16:41:24.136+0000] {subprocess.py:106} INFO - [0m16:41:24  Unable to do partial parsing because a project config has changed
+[2025-04-14T16:41:27.518+0000] {subprocess.py:106} INFO - [0m16:41:27  Found 2 models, 1 seed, 1 source, 0 exposures, 0 metrics, 570 macros, 0 groups, 0 semantic models
+[2025-04-14T16:41:27.524+0000] {subprocess.py:106} INFO - [0m16:41:27
+[2025-04-14T16:41:28.272+0000] {subprocess.py:106} INFO - [0m16:41:28  Concurrency: 1 threads (target='dev')
+[2025-04-14T16:41:28.273+0000] {subprocess.py:106} INFO - [0m16:41:28
+[2025-04-14T16:41:28.285+0000] {subprocess.py:106} INFO - [0m16:41:28  1 of 1 START sql table model db_project_dataset.core_flights ................... [RUN]
+[2025-04-14T16:41:28.893+0000] {subprocess.py:106} INFO - [0m16:41:28  1 of 1 ERROR creating sql table model db_project_dataset.core_flights .......... [[31mERROR[0m in 0.61s]
+[2025-04-14T16:41:28.900+0000] {subprocess.py:106} INFO - [0m16:41:28
+[2025-04-14T16:41:28.902+0000] {subprocess.py:106} INFO - [0m16:41:28  Finished running 1 table model in 0 hours 0 minutes and 1.38 seconds (1.38s).
+[2025-04-14T16:41:28.940+0000] {subprocess.py:106} INFO - [0m16:41:28
+[2025-04-14T16:41:28.942+0000] {subprocess.py:106} INFO - [0m16:41:28  [31mCompleted with 1 error and 0 warnings:[0m
+[2025-04-14T16:41:28.943+0000] {subprocess.py:106} INFO - [0m16:41:28
+[2025-04-14T16:41:28.945+0000] {subprocess.py:106} INFO - [0m16:41:28    Runtime Error in model core_flights (models/core/core_flights.sql)
+[2025-04-14T16:41:28.946+0000] {subprocess.py:106} INFO -   404 Not found: Table db-project-456518:db_project_dataset.airports was not found in location europe-central2; reason: notFound, message: Not found: Table db-project-456518:db_project_dataset.airports was not found in location europe-central2
+[2025-04-14T16:41:28.947+0000] {subprocess.py:106} INFO - 
+[2025-04-14T16:41:28.948+0000] {subprocess.py:106} INFO -   Location: europe-central2
+[2025-04-14T16:41:28.949+0000] {subprocess.py:106} INFO -   Job ID: becbdaaf-36ee-4153-ad12-26fa176e49b5
+[2025-04-14T16:41:28.950+0000] {subprocess.py:106} INFO - 
+[2025-04-14T16:41:28.950+0000] {subprocess.py:106} INFO - [0m16:41:28
+[2025-04-14T16:41:28.951+0000] {subprocess.py:106} INFO - [0m16:41:28  Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[2025-04-14T16:41:29.936+0000] {subprocess.py:110} INFO - Command exited with return code 1
+[2025-04-14T16:41:29.949+0000] {taskinstance.py:3313} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-04-14T16:41:29.958+0000] {taskinstance.py:1226} INFO - Marking task as UP_FOR_RETRY. dag_id=dbt_***, task_id=run_dbt_core, run_id=manual__2025-04-14T15:18:53.940263+00:00, execution_date=20250414T151853, start_date=20250414T164118, end_date=20250414T164129
+[2025-04-14T16:41:29.990+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-14T16:41:29.991+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 491 for task run_dbt_core (Bash command failed. The command returned a non-zero exit code 1.; 11539)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3006, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 274, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3161, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3185, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-04-14T16:41:30.013+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-04-14T16:41:30.041+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-14T16:41:30.043+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
