@@ -2,15 +2,26 @@
 
 ## Problem Description
 
-This project focuses on analyzing a subset of the **airline on-time performance dataset** from **1987 to 1992**, covering detailed flight arrival and departure information for all commercial flights within the USA during this period. The data is derived from the **RITA (Research and Innovative Technology Administration)**, providing insights into airline operations, delays, cancellations, and more.
+This project aims to analyze a subset of the airline on-time performance dataset from 1987 to 1992, which contains detailed flight arrival and departure information for all commercial flights within the United States during this period. The data is sourced from the RITA (Research and Innovative Technology Administration) and offers valuable insights into airline operations, delays, cancellations, and more.
 
-The dataset spans **5 years** of operations, containing millions of records, and is highly valuable for understanding early trends and factors that influenced flight performance in the late 1980s and early 1990s.
+In this project, the primary goal is to analyze flight movements within the USA to gain insights into:
+
+ - Which airports experience the most delays and how this varies by time and location.
+
+ - The number of flights departing each year, identifying the trends in terms of traffic.
+
+ - The most frequently used airports for both departures and arrivals, offering an understanding of the central hubs in the U.S. airline network.
+
+The dataset spans 5 years of operational data, covering millions of records, and provides a historical perspective on flight performance, delays, and cancellations. This analysis aims to uncover patterns that can inform future decision-making in airline operations, airport management, and policy-making regarding air travel.
 
 ### Key Insights:
-- Flight operations
-- Delays and cancellations
-- Factors influencing flight performance
-- Trends in airline industry performance across the years
+Flight operations within the USA
+
+Delays, cancellations, and contributing factors
+
+Airport performance, including traffic volume and delay frequency
+
+Trends in airline industry performance from 1987 to 1992, with a focus on the busiest and most problematic airports
 
 ![Map Image](img/flights_map.png)
 
@@ -140,6 +151,13 @@ However, **direct download links are not available** via API or scripts. Therefo
     gsutil cp <path-to-local-csv-file> gs://<your-bucket-name>/raw/
    ```
 
+4. In addition to the flight data, the **`carriers.csv`** file must also be downloaded from the same dataset page:  
+Once downloaded, upload `carriers.csv` to the **`seeds/`** folder in your GCS bucket:
+
+```bash
+gsutil cp carriers.csv gs://<your-bucket-name>/seeds/
+```
+
 ### 4. Airflow Setup
 
 Before running Airflow, make sure to configure the appropriate environment variables in the `docker-compose.yaml` file. These variables are necessary for authenticating with GCP and enabling Airflow to communicate with Google Cloud services.
@@ -204,9 +222,9 @@ The resulting BigQuery table is:
 - **Partitioned** by the year of the flight (`Year` column).
 - **Clustered** by the `Origin` column, which represents the departure airport.
 
-This setup ensures efficient storage and faster querying performance.
+Many queries, such as those filtering by date range (e.g., retrieving flight data for a specific year or a few years), can run much faster since BigQuery can limit its scan to only the relevant partitions (the data for a specific year).
 
-
+Clustering the data by the Origin (departure airport) helps further optimize the query performance for queries that filter or aggregate by departure airport.
 
 The execution of DBT models is handled automatically by Airflow through the DAG:  
 **run_dbt_model.py**
