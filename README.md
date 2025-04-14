@@ -170,7 +170,7 @@ docker-compose up
 ```
 This will launch the Airflow webserver, scheduler, and any other defined services. You should be able to access the Airflow UI at http://localhost:8080.
 
-### Airflow & DBT Workflow
+### 5. Airflow & DBT Workflow
 
 Once the infrastructure is deployed and raw data is uploaded to GCS, the data pipeline is orchestrated using **Airflow** with multiple DAGs handling each stage of the process.
 
@@ -218,7 +218,7 @@ This DAG is triggered **as the final step** in the pipeline after:
 
 The DAG runs the DBT CLI inside the container and builds models in the correct order based on their dependencies, ensuring that the final analytics tables in the marts/ layer are ready for consumption.
 
-### Looker Studio
+### 6. Looker Studio
 
 Once the data has been processed and stored in BigQuery, you can create interactive visualizations using **Looker Studio**.
 
@@ -242,7 +242,7 @@ Once the data has been processed and stored in BigQuery, you can create interact
      - **Year**: YEAR(flight_date) — to extract the year of the flight from the flight_date field.
      - **Month**: MONTH(flight_date) — to extract the month of the flight from the flight_date field.
 
-![Map Image](img/flights_map.png)
+![Map Image](img/my_dashboard.png)
 
 
 
