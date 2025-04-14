@@ -6,6 +6,8 @@ from airflow.providers.google.cloud.hooks.gcs import GCSHook
 from airflow.utils.dates import days_ago
 
 GCS_BUCKET_NAME = os.getenv('GCP_GCS_BUCKET')
+GCP_PROJECT_ID = os.getenv('GCP_PROJECT_ID')
+
 
 default_args = {
     "start_date": days_ago(1)
@@ -32,10 +34,10 @@ with DAG(
     )
     
     spark_job = {
-        "reference": {"project_id": "db-project-456518"},
+        "reference": {"project_id": f"{GCP_PROJECT_ID}"},
         "placement": {"cluster_name": "db-project-dataproc-cluster"},
         "pyspark_job": {
-            "main_python_file_uri": "gs://db_project_data_bucket/code/main_spark.py"
+            "main_python_file_uri": f"gs://{GCS_BUCKET_NAME}/code/main_spark.py"
         },
     }
 
@@ -43,7 +45,7 @@ with DAG(
         task_id = "submit_spark_job",
         job = spark_job,
         region = "europe-central2",
-        project_id = "db-project-456518"
+        project_id ={GCP_PROJECT_ID}
     )
 
     upload_spark_to_gcs >> submit_job

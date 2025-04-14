@@ -11,8 +11,8 @@ GOOGLE_CREDENTIALS = os.getenv('GOOGLE_APPLICATION_CREDENTIALS')
 #Creating basic spark session
 spark = SparkSession.builder \
     .appName("Transform the data from GCS and save to BigQuery") \
-    .config("spark.hadoop.fs.gs.project.id", "db-project-456518") \
-    .config("spark.hadoop.fs.gs.bucket", "db_project_data_bucket") \
+    .config("spark.hadoop.fs.gs.project.id", f"{GCP_PROJECT_ID}") \
+    .config("spark.hadoop.fs.gs.bucket", f"{GCS_BUCKET_NAME}") \
     .getOrCreate()
 
 #Preparing schema for staging data
@@ -45,10 +45,10 @@ carriers_schema = StructType([
 ])
 
 #Loading the data from GCS bucket staging folder
-df_staging = spark.read.csv(f'gs://db_project_data_bucket/staging/*.csv', schema=staging_schema, header=True)
+df_staging = spark.read.csv(f'gs://{GCS_BUCKET_NAME}/staging/*.csv', schema=staging_schema, header=True)
 
 #Loading the data from GCS bucket seeds folder carriers file
-df_seeds = spark.read.csv(f'gs://db_project_data_bucket/seeds/carriers.csv', schema=carriers_schema, header=True)
+df_seeds = spark.read.csv(f'gs://{GCS_BUCKET_NAME}/seeds/carriers.csv', schema=carriers_schema, header=True)
 
 df_transformed = df_staging \
     .withColumn("FlightDate", to_date(format_string("%04d-%02d-%02d", col("Year"), col("Month"), col("DayOfMonth")))) \
@@ -74,8 +74,8 @@ df_joined.show(truncate=False)
 # Writing the final result to BigQuery
 # Using partition on year column and clustering on origin (origin airport)
 df_joined.write.format("bigquery") \
-    .option("table", f"db-project-456518.db_project_dataset.flights_data") \
-    .option("temporaryGcsBucket", f"gs://db_project_data_bucket/temp/") \
+    .option("table", f"{GCP_PROJECT_ID}.db_project_dataset.flights_data") \
+    .option("temporaryGcsBucket", f"gs://{GCS_BUCKET_NAME}/temp/") \
     .option("partitionField", "FlightDate") \
     .option("clusteringFields", "Origin") \
     .mode("overwrite") \
