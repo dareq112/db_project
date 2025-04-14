@@ -140,9 +140,6 @@ However, **direct download links are not available** via API or scripts. Therefo
     gsutil cp <path-to-local-csv-file> gs://<your-bucket-name>/raw/
    ```
 
-### **4. `airflow_setup.md`**
-
-```markdown
 ### 4. Airflow Setup
 
 Before running Airflow, make sure to configure the appropriate environment variables in the `docker-compose.yaml` file. These variables are necessary for authenticating with GCP and enabling Airflow to communicate with Google Cloud services.
@@ -157,6 +154,7 @@ environment:
   - AIRFLOW_CONN_GOOGLE_CLOUD_DEFAULT=google-cloud://?key_path=%2Fopt%2Fairflow%2Fconfig%2Fgcp-key.json&project=<your-project-id>
   - GCP_PROJECT_ID=<your-project-id>
   - GCP_GCS_BUCKET=<your-gcs-bucket-name>
+```
 
 Replace <your-project-id> and <your-gcs-bucket-name> with your actual project and bucket names. Do not use quotation marks in the YAML if your values are plain strings.
 
@@ -164,11 +162,13 @@ Build the Airflow Docker Image
 Once the environment variables are set, build the Airflow image using:
 ```bash
    docker-compose build
+```
 Run Airflow
 To start the Airflow services, run:
 ```bash
     docker-compose up
 This will launch the Airflow webserver, scheduler, and any other defined services. You should be able to access the Airflow UI at http://localhost:8080.
+```
 
 ```markdown
 ### Airflow & DBT Workflow
