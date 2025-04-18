@@ -10,8 +10,17 @@ airports_data as (
 select 
     flight_data.id,
     flight_data.flight_date,
+    flight_data.flight_month,
     flight_data.dep_time,
     flight_data.arr_time,
+    
+    case
+        when flight_data.arr_time >= flight_data.dep_time then 
+            TIMESTAMP_DIFF(flight_data.arr_time, flight_data.dep_time, MINUTE)
+        else 
+            TIMESTAMP_DIFF(flight_data.arr_time, flight_data.dep_time, MINUTE) + 1440
+    end
+ as airtime,
     flight_data.flight_num,
     flight_data.actual_elapsed_time,
     flight_data.dep_delay,

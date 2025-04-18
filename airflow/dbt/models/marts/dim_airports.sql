@@ -5,11 +5,9 @@
 }}
 
 select
-    airport_code,
-    airport_name,
+    iata as airport_code,
+    airport as airport_name,
     city,
     state,
     country,
-    iata,
-    icao
 from {{ ref('airports') }}

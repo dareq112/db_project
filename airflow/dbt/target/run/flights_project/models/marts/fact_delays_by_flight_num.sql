@@ -1,8 +1,17 @@
 
+  
+    
 
-  create or replace view `db-project-456518`.`db_project_dataset`.`fact_delays_by_flight_num`
-  OPTIONS()
-  as with flight_data as (
+    create or replace table `db-project-456518`.`db_project_dataset`.`fact_delays_by_flight_num`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+with flight_data as (
     select *
     from `db-project-456518`.`db_project_dataset`.`core_flights`
     where arr_delay > 0 or dep_delay > 0
@@ -20,5 +29,6 @@ select
     max(dep_delay) as max_dep_delay,
     max(arr_delay) as max_arr_delay
 from flight_data
-group by flight_num;
-
+group by flight_num
+    );
+  

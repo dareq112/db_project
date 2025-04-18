@@ -14,9 +14,10 @@ airports_data as (
 select 
     flight_data.id,
     flight_data.flight_date,
+    flight_data.flight_month,
     flight_data.dep_time,
     flight_data.arr_time,
-    {{ airtime_minutes(flight_data.dep_time, flight_data.arr_time )}} as airtime,
+    {{ airtime_minutes('flight_data.dep_time', 'flight_data.arr_time') }} as airtime,
     flight_data.flight_num,
     flight_data.actual_elapsed_time,
     flight_data.dep_delay,

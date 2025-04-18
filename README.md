@@ -1,6 +1,7 @@
 # Data Engineering Zoomcamp Final Project
 
 ## Problem Description
+Dataset comes from Kaggle [https://www.kaggle.com/datasets/viggo123/data-fight-usa-dataset] and originally from [https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/HG7NV7].
 
 This project aims to analyze a subset of the airline on-time performance dataset from 1987 to 2007, which contains detailed flight arrival and departure information for all commercial flights within the United States during this period. The data is sourced from the RITA (Research and Innovative Technology Administration) and offers valuable insights into airline operations, delays, cancellations, and more.
 
@@ -219,14 +220,20 @@ The DAG runs the DBT CLI inside the container and builds models in the correct o
 ### 5. Looker Studio
 
 ### Dashboard Presentation
-![Map Image](img/my_dashboard.png)
+![Dashboard_1](img/my_dashboard.png)
 
 Link to dashboard: https://lookerstudio.google.com/reporting/4b22d87f-0b0e-44a9-b03e-caf207fd31d5
+
+![Dashboard_2](img/my_dashboard2.png)
+
+Link to dashboard: https://lookerstudio.google.com/reporting/394d813c-9bf6-46c5-a3ad-a5d9fc3b20f1
 
 At the end, I present my dashboard, which shows:
 
 - **Which airports had the most delayed flights.**
-- **The number of flights per month from 1987 to 1992.**
+- **The number of flights per month from 1987 to 2007.**
+- **Which airports had the most departure flights.**
+- **Which airports had the highest delays for both departure and arrival flights.**
 
 The dashboard allows for the analysis of data based on various parameters, such as delay times and the total number of flights within a specific period, helping to better understand the patterns of delays and the overall flight traffic during these years.
 

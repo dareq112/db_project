@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: db_project_dataset  # the dataset in BigQuery
+  - name: raw_data  # the dataset in BigQuery
     database: db-project-456518  # your BigQuery project ID
     schema: db_project_dataset  # schema (dataset) in BigQuery
     tables:

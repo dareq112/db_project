@@ -1,0 +1,54 @@
+[2025-04-18T21:27:52.330+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-18T21:27:52.358+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: run_dbt.run_dbt_all_models manual__2025-04-18T19:56:57.798037+00:00 [queued]>
+[2025-04-18T21:27:52.371+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: run_dbt.run_dbt_all_models manual__2025-04-18T19:56:57.798037+00:00 [queued]>
+[2025-04-18T21:27:52.372+0000] {taskinstance.py:2867} INFO - Starting attempt 27 of 28
+[2025-04-18T21:27:52.387+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): run_dbt_all_models> on 2025-04-18 19:56:57.798037+00:00
+[2025-04-18T21:27:52.396+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=48527) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-04-18T21:27:52.396+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'run_dbt', 'run_dbt_all_models', 'manual__2025-04-18T19:56:57.798037+00:00', '--job-id', '663', '--raw', '--subdir', 'DAGS_FOLDER/run_dbt_model.py', '--cfg-path', '/tmp/tmpzbp3v7do']
+[2025-04-18T21:27:52.398+0000] {standard_task_runner.py:72} INFO - Started process 48528 to run task
+[2025-04-18T21:27:52.398+0000] {standard_task_runner.py:105} INFO - Job 663: Subtask run_dbt_all_models
+[2025-04-18T21:27:52.450+0000] {task_command.py:467} INFO - Running <TaskInstance: run_dbt.run_dbt_all_models manual__2025-04-18T19:56:57.798037+00:00 [running]> on host f21ba0bbe878
+[2025-04-18T21:27:52.546+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='run_dbt' AIRFLOW_CTX_TASK_ID='run_dbt_all_models' AIRFLOW_CTX_EXECUTION_DATE='2025-04-18T19:56:57.798037+00:00' AIRFLOW_CTX_TRY_NUMBER='27' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-18T19:56:57.798037+00:00'
+[2025-04-18T21:27:52.547+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-18T21:27:52.566+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-04-18T21:27:52.567+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/dbt && dbt run']
+[2025-04-18T21:27:52.578+0000] {subprocess.py:99} INFO - Output:
+[2025-04-18T21:27:56.119+0000] {subprocess.py:106} INFO - [0m21:27:56  Running with dbt=1.8.1
+[2025-04-18T21:27:58.009+0000] {subprocess.py:106} INFO - [0m21:27:58  Registered adapter: bigquery=1.8.1
+[2025-04-18T21:28:01.487+0000] {subprocess.py:106} INFO - [0m21:28:01  Found 1 seed, 10 models, 1 source, 602 macros
+[2025-04-18T21:28:01.493+0000] {subprocess.py:106} INFO - [0m21:28:01
+[2025-04-18T21:28:02.378+0000] {subprocess.py:106} INFO - [0m21:28:02  Concurrency: 1 threads (target='dev')
+[2025-04-18T21:28:02.382+0000] {subprocess.py:106} INFO - [0m21:28:02
+[2025-04-18T21:28:02.412+0000] {subprocess.py:106} INFO - [0m21:28:02  1 of 10 START sql table model db_project_dataset.dim_airports .................. [RUN]
+[2025-04-18T21:28:04.770+0000] {subprocess.py:106} INFO - [0m21:28:04  1 of 10 OK created sql table model db_project_dataset.dim_airports ............. [[32mCREATE TABLE (3.4k rows, 141.3 KiB processed)[0m in 2.35s]
+[2025-04-18T21:28:04.776+0000] {subprocess.py:106} INFO - [0m21:28:04  2 of 10 START sql view model db_project_dataset.stg_flights .................... [RUN]
+[2025-04-18T21:28:05.425+0000] {subprocess.py:106} INFO - [0m21:28:05  2 of 10 OK created sql view model db_project_dataset.stg_flights ............... [[32mCREATE VIEW (0 processed)[0m in 0.64s]
+[2025-04-18T21:28:05.433+0000] {subprocess.py:106} INFO - [0m21:28:05  3 of 10 START sql table model db_project_dataset.core_flights .................. [RUN]
+[2025-04-18T21:28:10.996+0000] {subprocess.py:106} INFO - [0m21:28:10  3 of 10 OK created sql table model db_project_dataset.core_flights ............. [[32mCREATE TABLE (112.3m rows, 11.7 GiB processed)[0m in 5.56s]
+[2025-04-18T21:28:11.002+0000] {subprocess.py:106} INFO - [0m21:28:11  4 of 10 START sql table model db_project_dataset.dim_carriers .................. [RUN]
+[2025-04-18T21:28:13.259+0000] {subprocess.py:106} INFO - [0m21:28:13  4 of 10 OK created sql table model db_project_dataset.dim_carriers ............. [[32mCREATE TABLE (29.0 rows, 3.9 GiB processed)[0m in 2.25s]
+[2025-04-18T21:28:13.264+0000] {subprocess.py:106} INFO - [0m21:28:13  5 of 10 START sql table model db_project_dataset.dim_dates ..................... [RUN]
+[2025-04-18T21:28:15.395+0000] {subprocess.py:106} INFO - [0m21:28:15  5 of 10 OK created sql table model db_project_dataset.dim_dates ................ [[32mCREATE TABLE (7.4k rows, 857.0 MiB processed)[0m in 2.13s]
+[2025-04-18T21:28:15.399+0000] {subprocess.py:106} INFO - [0m21:28:15  6 of 10 START sql table model db_project_dataset.fact_delays_by_flight_num ..... [RUN]
+[2025-04-18T21:28:17.493+0000] {subprocess.py:106} INFO - [0m21:28:17  6 of 10 OK created sql table model db_project_dataset.fact_delays_by_flight_num  [[32mCREATE TABLE (8.1k rows, 2.5 GiB processed)[0m in 2.09s]
+[2025-04-18T21:28:17.501+0000] {subprocess.py:106} INFO - [0m21:28:17  7 of 10 START sql table model db_project_dataset.fact_delays_departure_by_airport  [RUN]
+[2025-04-18T21:28:19.692+0000] {subprocess.py:106} INFO - [0m21:28:19  7 of 10 OK created sql table model db_project_dataset.fact_delays_departure_by_airport  [[32mCREATE TABLE (1.3k rows, 4.1 GiB processed)[0m in 2.19s]
+[2025-04-18T21:28:19.697+0000] {subprocess.py:106} INFO - [0m21:28:19  8 of 10 START sql table model db_project_dataset.fact_departures_by_airport_year  [RUN]
+[2025-04-18T21:28:21.771+0000] {subprocess.py:106} INFO - [0m21:28:21  8 of 10 OK created sql table model db_project_dataset.fact_departures_by_airport_year  [[32mCREATE TABLE (343.0 rows, 535.6 MiB processed)[0m in 2.07s]
+[2025-04-18T21:28:21.775+0000] {subprocess.py:106} INFO - [0m21:28:21  9 of 10 START sql table model db_project_dataset.fact_departures_yearly ........ [RUN]
+[2025-04-18T21:28:23.745+0000] {subprocess.py:106} INFO - [0m21:28:23  9 of 10 OK created sql table model db_project_dataset.fact_departures_yearly ... [[32mCREATE TABLE (21.0 rows, 857.0 MiB processed)[0m in 1.97s]
+[2025-04-18T21:28:23.758+0000] {subprocess.py:106} INFO - [0m21:28:23  10 of 10 START sql table model db_project_dataset.fact_most_departures_airport . [RUN]
+[2025-04-18T21:28:25.895+0000] {subprocess.py:106} INFO - [0m21:28:25  10 of 10 OK created sql table model db_project_dataset.fact_most_departures_airport  [[32mCREATE TABLE (352.0 rows, 2.7 GiB processed)[0m in 2.13s]
+[2025-04-18T21:28:25.902+0000] {subprocess.py:106} INFO - [0m21:28:25
+[2025-04-18T21:28:25.903+0000] {subprocess.py:106} INFO - [0m21:28:25  Finished running 9 table models, 1 view model in 0 hours 0 minutes and 24.41 seconds (24.41s).
+[2025-04-18T21:28:26.004+0000] {subprocess.py:106} INFO - [0m21:28:26
+[2025-04-18T21:28:26.006+0000] {subprocess.py:106} INFO - [0m21:28:26  [32mCompleted successfully[0m
+[2025-04-18T21:28:26.007+0000] {subprocess.py:106} INFO - [0m21:28:26
+[2025-04-18T21:28:26.008+0000] {subprocess.py:106} INFO - [0m21:28:26  Done. PASS=10 WARN=0 ERROR=0 SKIP=0 TOTAL=10
+[2025-04-18T21:28:27.295+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-04-18T21:28:27.322+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-18T21:28:27.323+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=run_dbt, task_id=run_dbt_all_models, run_id=manual__2025-04-18T19:56:57.798037+00:00, execution_date=20250418T195657, start_date=20250418T212752, end_date=20250418T212827
+[2025-04-18T21:28:27.392+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-18T21:28:27.405+0000] {standard_task_runner.py:217} INFO - Process not found (most likely exited), stop collecting metrics
+[2025-04-18T21:28:27.408+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-18T21:28:27.411+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,24 @@
+[2025-04-18T19:23:24.265+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-18T19:23:24.287+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: spark_csv_to_bigquery.submit_spark_job manual__2025-04-18T16:50:25.119251+00:00 [queued]>
+[2025-04-18T19:23:24.298+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: spark_csv_to_bigquery.submit_spark_job manual__2025-04-18T16:50:25.119251+00:00 [queued]>
+[2025-04-18T19:23:24.299+0000] {taskinstance.py:2867} INFO - Starting attempt 15 of 15
+[2025-04-18T19:23:24.315+0000] {taskinstance.py:2890} INFO - Executing <Task(DataprocSubmitJobOperator): submit_spark_job> on 2025-04-18 16:50:25.119251+00:00
+[2025-04-18T19:23:24.323+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=36939) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-04-18T19:23:24.324+0000] {standard_task_runner.py:72} INFO - Started process 36940 to run task
+[2025-04-18T19:23:24.323+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'spark_csv_to_bigquery', 'submit_spark_job', 'manual__2025-04-18T16:50:25.119251+00:00', '--job-id', '619', '--raw', '--subdir', 'DAGS_FOLDER/spark_job/spark_job.py', '--cfg-path', '/tmp/tmp0w5vxehk']
+[2025-04-18T19:23:24.325+0000] {standard_task_runner.py:105} INFO - Job 619: Subtask submit_spark_job
+[2025-04-18T19:23:24.375+0000] {task_command.py:467} INFO - Running <TaskInstance: spark_csv_to_bigquery.submit_spark_job manual__2025-04-18T16:50:25.119251+00:00 [running]> on host f21ba0bbe878
+[2025-04-18T19:23:24.460+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='spark_csv_to_bigquery' AIRFLOW_CTX_TASK_ID='submit_spark_job' AIRFLOW_CTX_EXECUTION_DATE='2025-04-18T16:50:25.119251+00:00' AIRFLOW_CTX_TRY_NUMBER='15' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-18T16:50:25.119251+00:00'
+[2025-04-18T19:23:24.462+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-18T19:23:24.475+0000] {dataproc.py:1885} INFO - Submitting job
+[2025-04-18T19:23:24.477+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2025-04-18T19:23:24.478+0000] {connection.py:277} WARNING - Connection schemes (type: google_cloud) shall not contain '_' according to RFC3986.
+[2025-04-18T19:23:24.479+0000] {base.py:84} INFO - Retrieving connection 'google_cloud_default'
+[2025-04-18T19:23:24.820+0000] {dataproc.py:1901} INFO - Job ff3b5af3-833c-494d-9fd1-f7f35ef936bf submitted successfully.
+[2025-04-18T19:23:24.837+0000] {dataproc.py:1936} INFO - Waiting for job ff3b5af3-833c-494d-9fd1-f7f35ef936bf to complete
+[2025-04-18T19:56:24.920+0000] {dataproc.py:1940} INFO - Job ff3b5af3-833c-494d-9fd1-f7f35ef936bf completed successfully.
+[2025-04-18T19:56:24.947+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-18T19:56:24.948+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=spark_csv_to_bigquery, task_id=submit_spark_job, run_id=manual__2025-04-18T16:50:25.119251+00:00, execution_date=20250418T165025, start_date=20250418T192324, end_date=20250418T195624
+[2025-04-18T19:56:25.015+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-18T19:56:25.031+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-18T19:56:25.033+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

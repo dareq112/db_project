@@ -1,3 +1,5 @@
+
+
 with flight_data as (
     select *
     from `db-project-456518`.`db_project_dataset`.`core_flights`

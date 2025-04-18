@@ -71,7 +71,7 @@ x-airflow-common:
     _PIP_ADDITIONAL_REQUIREMENTS: -r requirements.txt
     # The following line can be used to set a custom config file, stored in the local config folder
     # If you want to use it, outcomment it and replace airflow.cfg with the name of your config file
-    # AIRFLOW_CONFIG: '/opt/airflow/config/airflow.cfg'
+    AIRFLOW_CONFIG: '/opt/airflow/config/airflow.cfg'
     GOOGLE_APPLICATION_CREDENTIALS: '/opt/airflow/config/gcp-key.json'
     AIRFLOW_CONN_GOOGLE_CLOUD_DEFAULT: 'google-cloud://?key_path=%2Fopt%2Fairflow%2Fconfig%2Fgcp-key.json&project=<your-project-id>'
     GCP_PROJECT_ID: '<your-project-id>'

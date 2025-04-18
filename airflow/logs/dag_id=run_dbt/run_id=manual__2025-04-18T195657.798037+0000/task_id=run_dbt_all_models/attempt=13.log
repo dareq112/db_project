@@ -1,0 +1,117 @@
+[2025-04-18T20:48:55.492+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-18T20:48:55.560+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: run_dbt.run_dbt_all_models manual__2025-04-18T19:56:57.798037+00:00 [queued]>
+[2025-04-18T20:48:55.600+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: run_dbt.run_dbt_all_models manual__2025-04-18T19:56:57.798037+00:00 [queued]>
+[2025-04-18T20:48:55.602+0000] {taskinstance.py:2867} INFO - Starting attempt 13 of 14
+[2025-04-18T20:48:55.675+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): run_dbt_all_models> on 2025-04-18 19:56:57.798037+00:00
+[2025-04-18T20:48:55.699+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'run_dbt', 'run_dbt_all_models', 'manual__2025-04-18T19:56:57.798037+00:00', '--job-id', '647', '--raw', '--subdir', 'DAGS_FOLDER/run_dbt_model.py', '--cfg-path', '/tmp/tmpgp2lhsg0']
+[2025-04-18T20:48:55.703+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=45677) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-04-18T20:48:55.704+0000] {standard_task_runner.py:105} INFO - Job 647: Subtask run_dbt_all_models
+[2025-04-18T20:48:55.705+0000] {standard_task_runner.py:72} INFO - Started process 45678 to run task
+[2025-04-18T20:48:55.775+0000] {task_command.py:467} INFO - Running <TaskInstance: run_dbt.run_dbt_all_models manual__2025-04-18T19:56:57.798037+00:00 [running]> on host f21ba0bbe878
+[2025-04-18T20:48:55.871+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='run_dbt' AIRFLOW_CTX_TASK_ID='run_dbt_all_models' AIRFLOW_CTX_EXECUTION_DATE='2025-04-18T19:56:57.798037+00:00' AIRFLOW_CTX_TRY_NUMBER='13' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-18T19:56:57.798037+00:00'
+[2025-04-18T20:48:55.875+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-18T20:48:55.901+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-04-18T20:48:55.902+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/dbt && dbt run']
+[2025-04-18T20:48:55.912+0000] {subprocess.py:99} INFO - Output:
+[2025-04-18T20:49:00.860+0000] {subprocess.py:106} INFO - [0m20:49:00  Running with dbt=1.8.1
+[2025-04-18T20:49:03.333+0000] {subprocess.py:106} INFO - [0m20:49:03  Registered adapter: bigquery=1.8.1
+[2025-04-18T20:49:06.491+0000] {subprocess.py:106} INFO - [0m20:49:06  Found 1 seed, 10 models, 1 source, 602 macros
+[2025-04-18T20:49:06.499+0000] {subprocess.py:106} INFO - [0m20:49:06
+[2025-04-18T20:49:07.414+0000] {subprocess.py:106} INFO - [0m20:49:07  Concurrency: 1 threads (target='dev')
+[2025-04-18T20:49:07.415+0000] {subprocess.py:106} INFO - [0m20:49:07
+[2025-04-18T20:49:07.427+0000] {subprocess.py:106} INFO - [0m20:49:07  1 of 10 START sql table model db_project_dataset.dim_airports .................. [RUN]
+[2025-04-18T20:49:10.078+0000] {subprocess.py:106} INFO - [0m20:49:10  1 of 10 OK created sql table model db_project_dataset.dim_airports ............. [[32mCREATE TABLE (3.4k rows, 141.3 KiB processed)[0m in 2.65s]
+[2025-04-18T20:49:10.082+0000] {subprocess.py:106} INFO - [0m20:49:10  2 of 10 START sql view model db_project_dataset.stg_flights .................... [RUN]
+[2025-04-18T20:49:10.770+0000] {subprocess.py:106} INFO - [0m20:49:10  2 of 10 OK created sql view model db_project_dataset.stg_flights ............... [[32mCREATE VIEW (0 processed)[0m in 0.67s]
+[2025-04-18T20:49:10.789+0000] {subprocess.py:106} INFO - [0m20:49:10  3 of 10 START sql table model db_project_dataset.core_flights .................. [RUN]
+[2025-04-18T20:49:13.577+0000] {subprocess.py:106} INFO - [0m20:49:13  BigQuery adapter: https://console.cloud.google.com/bigquery?project=db-project-456518&j=bq:europe-central2:e28491aa-43b1-411e-a611-5597d775d156&page=queryresults
+[2025-04-18T20:49:13.588+0000] {subprocess.py:106} INFO - [0m20:49:13  3 of 10 ERROR creating sql table model db_project_dataset.core_flights ......... [[31mERROR[0m in 2.79s]
+[2025-04-18T20:49:13.593+0000] {subprocess.py:106} INFO - [0m20:49:13  4 of 10 SKIP relation db_project_dataset.dim_carriers .......................... [[33mSKIP[0m]
+[2025-04-18T20:49:13.596+0000] {subprocess.py:106} INFO - [0m20:49:13  5 of 10 SKIP relation db_project_dataset.dim_dates ............................. [[33mSKIP[0m]
+[2025-04-18T20:49:13.599+0000] {subprocess.py:106} INFO - [0m20:49:13  6 of 10 SKIP relation db_project_dataset.fact_delays_by_flight_num ............. [[33mSKIP[0m]
+[2025-04-18T20:49:13.603+0000] {subprocess.py:106} INFO - [0m20:49:13  7 of 10 SKIP relation db_project_dataset.fact_delays_departure_by_airport ...... [[33mSKIP[0m]
+[2025-04-18T20:49:13.606+0000] {subprocess.py:106} INFO - [0m20:49:13  8 of 10 SKIP relation db_project_dataset.fact_departures.by_year ............... [[33mSKIP[0m]
+[2025-04-18T20:49:13.610+0000] {subprocess.py:106} INFO - [0m20:49:13  9 of 10 SKIP relation db_project_dataset.fact_departures_by_airport_year ....... [[33mSKIP[0m]
+[2025-04-18T20:49:13.613+0000] {subprocess.py:106} INFO - [0m20:49:13  10 of 10 SKIP relation db_project_dataset.fact_most_departures_airport ......... [[33mSKIP[0m]
+[2025-04-18T20:49:13.619+0000] {subprocess.py:106} INFO - [0m20:49:13
+[2025-04-18T20:49:13.620+0000] {subprocess.py:106} INFO - [0m20:49:13  Finished running 9 table models, 1 view model in 0 hours 0 minutes and 7.12 seconds (7.12s).
+[2025-04-18T20:49:13.711+0000] {subprocess.py:106} INFO - [0m20:49:13
+[2025-04-18T20:49:13.713+0000] {subprocess.py:106} INFO - [0m20:49:13  [31mCompleted with 1 error and 0 warnings:[0m
+[2025-04-18T20:49:13.714+0000] {subprocess.py:106} INFO - [0m20:49:13
+[2025-04-18T20:49:13.716+0000] {subprocess.py:106} INFO - [0m20:49:13    Database Error in model core_flights (models/core/core_flights.sql)
+[2025-04-18T20:49:13.716+0000] {subprocess.py:106} INFO -   Invalid datetime string "2003-08-03 24:02:00"
+[2025-04-18T20:49:13.717+0000] {subprocess.py:106} INFO -   compiled code at target/run/flights_project/models/core/core_flights.sql
+[2025-04-18T20:49:13.718+0000] {subprocess.py:106} INFO - [0m20:49:13
+[2025-04-18T20:49:13.719+0000] {subprocess.py:106} INFO - [0m20:49:13  Done. PASS=2 WARN=0 ERROR=1 SKIP=7 TOTAL=10
+[2025-04-18T20:49:14.908+0000] {subprocess.py:110} INFO - Command exited with return code 1
+[2025-04-18T20:49:14.919+0000] {taskinstance.py:3313} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-04-18T20:49:14.927+0000] {taskinstance.py:1226} INFO - Marking task as UP_FOR_RETRY. dag_id=run_dbt, task_id=run_dbt_all_models, run_id=manual__2025-04-18T19:56:57.798037+00:00, execution_date=20250418T195657, start_date=20250418T204855, end_date=20250418T204914
+[2025-04-18T20:49:14.961+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-18T20:49:14.963+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 647 for task run_dbt_all_models (Bash command failed. The command returned a non-zero exit code 1.; 45678)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3006, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 274, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3161, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3185, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-04-18T20:49:15.005+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-04-18T20:49:15.029+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-18T20:49:15.032+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
