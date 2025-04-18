@@ -1,7 +1,7 @@
 import os
 from pyspark.sql import SparkSession
 from pyspark.sql.types import StructType, StructField, StringType, IntegerType, FloatType
-from pyspark.sql.functions import col, to_date, format_string
+from pyspark.sql.functions import col, to_date, format_string, date_format
 import pyspark.sql.functions as F
 
 GCS_BUCKET_NAME = '' #Your bucket name Bucket must be hard-coded as script is run in DataProc cluster
@@ -75,12 +75,14 @@ df_joined = df_transformed.join(df_seeds, df_transformed["UniqueCarrier"] == df_
 
 df_joined.show(truncate=False)
 
+df_joined = df_joined.withColumn("FlightMonth", date_format("FlightDate", "yyyy-MM"))
+
 # Writing the final result to BigQuery
 # Using partition on year column and clustering on origin (origin airport)
 df_joined.write.format("bigquery") \
     .option("table", f"{GCP_PROJECT_ID}.db_project_dataset.flights_data") \
     .option("temporaryGcsBucket", f"gs://{GCS_BUCKET_NAME}/temp/") \
-    .option("partitionField", "FlightDate") \
+    .option("partitionField", "FlightMonth") \
     .option("clusteringFields", "Origin") \
     .mode("overwrite") \
     .save()
