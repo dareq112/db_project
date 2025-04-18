@@ -34,7 +34,7 @@ with DAG(
     )
     
     spark_job = {
-        "reference": {"project_id": f"{GCP_PROJECT_ID}"},
+        "reference": {"project_id": GCP_PROJECT_ID},
         "placement": {"cluster_name": "db-project-dataproc-cluster"},
         "pyspark_job": {
             "main_python_file_uri": f"gs://{GCS_BUCKET_NAME}/code/main_spark.py"
@@ -45,7 +45,7 @@ with DAG(
         task_id = "submit_spark_job",
         job = spark_job,
         region = "europe-central2",
-        project_id ={GCP_PROJECT_ID}
+        project_id = GCP_PROJECT_ID
     )
 
     upload_spark_to_gcs >> submit_job

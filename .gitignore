@@ -3,3 +3,4 @@ airflow/config/
 terraform/.terraform/
 terraform/gcp-key.json
 terraform/terraform.tfvars2
+airflow/dags/first_stage.py

@@ -72,17 +72,20 @@ x-airflow-common:
     # The following line can be used to set a custom config file, stored in the local config folder
     # If you want to use it, outcomment it and replace airflow.cfg with the name of your config file
     # AIRFLOW_CONFIG: '/opt/airflow/config/airflow.cfg'
-    GOOGLE_APPLICATION_CREDENTIALS: /opt/airflow/config/gcp-key.json
-    AIRFLOW_CONN_GOOGLE_CLOUD_DEFAULT: "google-cloud://?key_path=%2Fopt%2Fairflow%2Fconfig%2Fgcp-key.json&project=db-project-456518"
-    GCP_PROJECT_ID: 'db-project-456518'
-    GCP_GCS_BUCKET: 'db_project_data_bucket'
+    GOOGLE_APPLICATION_CREDENTIALS: '/opt/airflow/config/gcp-key.json'
+    AIRFLOW_CONN_GOOGLE_CLOUD_DEFAULT: 'google-cloud://?key_path=%2Fopt%2Fairflow%2Fconfig%2Fgcp-key.json&project=<your-project-id>'
+    GCP_PROJECT_ID: '<your-project-id>'
+    GCP_GCS_BUCKET: '<your-gcs-bucket-name>'
+    KAGGLE_KEY: '<your-kaggle-api-key>'
+    KAGGLE_USERNAME: '<your-kaggle-account-username>'
+
   volumes:
     - ${AIRFLOW_PROJ_DIR:-.}/dags:/opt/airflow/dags
     - ${AIRFLOW_PROJ_DIR:-.}/logs:/opt/airflow/logs
     - ${AIRFLOW_PROJ_DIR:-.}/config:/opt/airflow/config
     - ${AIRFLOW_PROJ_DIR:-.}/plugins:/opt/airflow/plugins
     - ${AIRFLOW_PROJ_DIR:-.}/requirements.txt:/requirements.txt
-    - ${AIRFLOW_PROJ_DIR:-.}/dbt:/opt/airflow/dbt # Mount DBT directory
+    - ${AIRFLOW_PROJ_DIR:-.}/dbt:/opt/airflow/dbt
     - ${AIRFLOW_PROJ_DIR:-.}/config/gcp-key.json:/opt/airflow/config/gcp-key.json
   user: "${AIRFLOW_UID:-50000}:0"
   depends_on: &airflow-common-depends-on

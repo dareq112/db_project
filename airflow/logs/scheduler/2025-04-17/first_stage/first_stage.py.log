@@ -1,0 +1,441 @@
+[2025-04-17T20:33:05.467+0000] {processor.py:186} INFO - Started process (PID=223) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:33:05.468+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:33:05.471+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:33:05.470+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:33:10.144+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:33:10.174+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:33:10.173+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:33:10.203+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:33:10.203+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:33:10.229+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 4.771 seconds
+[2025-04-17T20:33:40.779+0000] {processor.py:186} INFO - Started process (PID=252) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:33:40.780+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:33:40.783+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:33:40.782+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:33:41.321+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:33:41.347+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:33:41.346+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:33:41.375+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:33:41.374+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:33:41.395+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 0.623 seconds
+[2025-04-17T20:34:11.520+0000] {processor.py:186} INFO - Started process (PID=279) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:34:11.521+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:34:11.525+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:34:11.524+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:34:12.073+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:34:12.097+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:34:12.097+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:34:12.123+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:34:12.123+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:34:12.142+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 0.632 seconds
+[2025-04-17T20:34:43.014+0000] {processor.py:186} INFO - Started process (PID=322) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:34:43.015+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:34:43.018+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:34:43.017+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:34:43.767+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:34:43.791+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:34:43.791+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:34:43.817+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:34:43.817+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:34:43.843+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 0.836 seconds
+[2025-04-17T20:35:14.726+0000] {processor.py:186} INFO - Started process (PID=359) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:35:14.729+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:35:14.732+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:35:14.731+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:35:15.828+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:35:15.861+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:35:15.860+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:35:15.897+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:35:15.897+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:35:15.918+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 1.210 seconds
+[2025-04-17T20:35:46.023+0000] {processor.py:186} INFO - Started process (PID=387) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:35:46.026+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:35:46.029+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:35:46.029+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:35:47.066+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:35:47.094+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:35:47.093+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:35:47.122+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:35:47.121+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:35:47.341+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 1.326 seconds
+[2025-04-17T20:36:17.903+0000] {processor.py:186} INFO - Started process (PID=419) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:36:17.904+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:36:17.907+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:36:17.907+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:36:20.717+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:36:20.755+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:36:20.755+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:36:20.804+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:36:20.803+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:36:20.844+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 2.954 seconds
+[2025-04-17T20:36:51.121+0000] {processor.py:186} INFO - Started process (PID=449) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:36:51.122+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:36:51.125+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:36:51.124+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:36:51.630+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:36:51.655+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:36:51.655+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:36:51.685+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:36:51.685+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:36:51.921+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 0.807 seconds
+[2025-04-17T20:37:22.707+0000] {processor.py:186} INFO - Started process (PID=477) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:37:22.708+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:37:22.711+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:37:22.711+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:37:23.214+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:37:23.240+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:37:23.239+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:37:23.270+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:37:23.269+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:37:23.290+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 0.589 seconds
+[2025-04-17T20:37:54.126+0000] {processor.py:186} INFO - Started process (PID=516) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:37:54.128+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:37:54.130+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:37:54.130+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:37:54.582+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:37:54.613+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:37:54.613+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:37:54.640+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:37:54.640+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:37:54.660+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 0.540 seconds
+[2025-04-17T20:38:25.568+0000] {processor.py:186} INFO - Started process (PID=549) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:38:25.571+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:38:25.573+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:38:25.573+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:38:26.009+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:38:26.033+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:38:26.032+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:38:26.057+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:38:26.057+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:38:26.077+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 0.515 seconds
+[2025-04-17T20:38:56.713+0000] {processor.py:186} INFO - Started process (PID=577) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:38:56.715+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:38:56.717+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:38:56.717+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:38:57.207+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:38:57.233+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:38:57.233+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:38:57.257+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:38:57.257+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:38:57.446+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 0.739 seconds
+[2025-04-17T20:39:27.865+0000] {processor.py:186} INFO - Started process (PID=605) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:39:27.866+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:39:27.869+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:39:27.868+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:39:28.299+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:39:28.325+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:39:28.324+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:39:28.353+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:39:28.353+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:39:28.374+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 0.516 seconds
+[2025-04-17T20:39:59.369+0000] {processor.py:186} INFO - Started process (PID=642) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:39:59.371+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:39:59.374+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:39:59.374+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:39:59.935+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:39:59.968+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:39:59.967+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:40:00.000+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:40:00.000+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:40:00.031+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 0.672 seconds
+[2025-04-17T20:40:30.981+0000] {processor.py:186} INFO - Started process (PID=677) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:40:30.984+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:40:30.997+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:40:30.995+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:40:32.740+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:40:33.263+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:40:33.262+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:40:33.321+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:40:33.321+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:40:33.401+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 2.438 seconds
+[2025-04-17T20:41:03.638+0000] {processor.py:186} INFO - Started process (PID=706) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:41:03.640+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:41:03.645+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:41:03.643+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:41:04.377+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:41:04.419+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:41:04.418+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:41:04.456+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:41:04.455+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:41:04.781+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 1.166 seconds
+[2025-04-17T20:41:35.517+0000] {processor.py:186} INFO - Started process (PID=747) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:41:35.518+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:41:35.521+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:41:35.521+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:41:36.156+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:41:36.192+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:41:36.191+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:41:36.709+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:41:36.709+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:41:36.732+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 1.222 seconds
+[2025-04-17T20:42:08.143+0000] {processor.py:186} INFO - Started process (PID=785) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:42:08.146+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:42:08.150+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:42:08.149+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:42:08.720+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:42:08.745+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:42:08.745+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:42:08.769+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:42:08.769+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:42:08.789+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 0.658 seconds
+[2025-04-17T20:42:39.501+0000] {processor.py:186} INFO - Started process (PID=816) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:42:39.503+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:42:39.507+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:42:39.506+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:42:40.117+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:42:40.147+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:42:40.146+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:42:40.184+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:42:40.184+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:42:40.210+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 0.721 seconds
+[2025-04-17T20:43:10.707+0000] {processor.py:186} INFO - Started process (PID=847) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:43:10.709+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:43:10.711+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:43:10.711+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:43:11.178+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:43:11.205+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:43:11.204+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:43:11.230+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:43:11.230+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:43:11.420+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 0.720 seconds
+[2025-04-17T20:43:42.047+0000] {processor.py:186} INFO - Started process (PID=886) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:43:42.049+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:43:42.052+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:43:42.051+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:43:43.901+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:43:45.526+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:43:45.525+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:43:47.679+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:43:47.679+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:43:47.710+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 5.678 seconds
+[2025-04-17T20:44:18.101+0000] {processor.py:186} INFO - Started process (PID=919) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:44:18.102+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:44:18.106+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:44:18.106+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:44:18.754+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:44:18.784+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:44:18.783+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:44:18.815+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:44:18.814+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:44:18.840+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 0.747 seconds
+[2025-04-17T20:44:48.937+0000] {processor.py:186} INFO - Started process (PID=947) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:44:48.939+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:44:48.941+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:44:48.941+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:44:49.449+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:44:49.491+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:44:49.490+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:44:49.529+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:44:49.528+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:44:49.555+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 0.626 seconds
+[2025-04-17T20:45:06.256+0000] {processor.py:186} INFO - Started process (PID=963) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:45:06.258+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:45:06.261+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:45:06.260+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:45:07.784+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:45:07.813+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:45:07.812+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:45:07.848+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:45:07.848+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:45:08.083+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 1.834 seconds
+[2025-04-17T20:45:15.291+0000] {processor.py:186} INFO - Started process (PID=981) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:45:15.293+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:45:15.296+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:45:15.295+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:45:15.795+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:45:15.827+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:45:15.825+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:45:15.861+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:45:15.860+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:45:16.068+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 0.785 seconds
+[2025-04-17T20:45:22.255+0000] {processor.py:186} INFO - Started process (PID=987) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:45:22.257+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:45:22.259+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:45:22.259+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:45:22.923+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:45:22.954+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:45:22.954+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:45:23.328+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:45:23.328+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:45:23.352+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 1.106 seconds
+[2025-04-17T20:45:54.334+0000] {processor.py:186} INFO - Started process (PID=1033) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:45:54.341+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:45:54.344+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:45:54.343+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:45:55.276+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:45:55.311+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:45:55.310+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:45:56.911+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:45:56.911+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:45:56.934+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 2.622 seconds
+[2025-04-17T20:46:04.118+0000] {processor.py:186} INFO - Started process (PID=1044) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:46:04.119+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:46:04.123+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:46:04.123+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:46:04.681+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:46:04.714+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:46:04.714+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:46:04.746+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:46:04.745+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:46:04.792+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 0.682 seconds
+[2025-04-17T20:46:35.094+0000] {processor.py:186} INFO - Started process (PID=1082) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:46:35.096+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:46:35.098+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:46:35.098+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:46:35.537+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:46:35.562+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:46:35.561+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:46:35.586+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:46:35.586+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:46:35.607+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 0.519 seconds
+[2025-04-17T20:47:05.907+0000] {processor.py:186} INFO - Started process (PID=1120) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:47:05.909+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:47:05.912+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:47:05.911+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:47:07.323+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:47:07.426+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:47:07.425+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:47:07.517+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:47:07.516+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:47:08.735+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 2.835 seconds
+[2025-04-17T20:47:39.328+0000] {processor.py:186} INFO - Started process (PID=1148) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:47:39.330+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:47:39.334+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:47:39.333+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:47:40.056+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:47:40.097+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:47:40.097+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:47:40.349+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:47:40.348+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:47:40.376+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 1.057 seconds
+[2025-04-17T20:48:10.629+0000] {processor.py:186} INFO - Started process (PID=1176) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:48:10.631+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:48:10.634+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:48:10.634+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:48:11.184+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:48:11.230+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:48:11.229+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:48:11.271+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:48:11.271+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:48:11.293+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 0.674 seconds
+[2025-04-17T20:48:41.576+0000] {processor.py:186} INFO - Started process (PID=1210) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:48:41.577+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:48:41.581+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:48:41.580+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:48:42.259+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:48:42.292+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:48:42.291+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:48:42.324+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:48:42.324+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:48:42.352+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 0.783 seconds
+[2025-04-17T20:49:13.034+0000] {processor.py:186} INFO - Started process (PID=1241) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:49:13.037+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:49:13.041+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:49:13.041+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:49:13.575+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:49:13.605+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:49:13.605+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:49:13.634+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:49:13.634+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:49:13.831+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 0.809 seconds
+[2025-04-17T20:49:44.247+0000] {processor.py:186} INFO - Started process (PID=1278) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:49:44.248+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:49:44.251+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:49:44.250+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:49:44.816+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:49:44.844+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:49:44.843+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:49:45.076+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:49:45.076+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:49:45.104+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 0.865 seconds
+[2025-04-17T20:50:15.646+0000] {processor.py:186} INFO - Started process (PID=1312) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:50:15.649+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:50:15.652+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:50:15.651+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:50:16.243+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:50:16.273+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:50:16.273+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:50:16.311+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:50:16.311+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:50:16.341+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 0.702 seconds
+[2025-04-17T20:50:46.453+0000] {processor.py:186} INFO - Started process (PID=1340) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:50:46.455+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:50:46.457+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:50:46.457+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:50:46.911+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:50:46.938+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:50:46.938+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:50:46.963+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:50:46.963+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:50:46.985+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 0.540 seconds
+[2025-04-17T20:51:17.477+0000] {processor.py:186} INFO - Started process (PID=1383) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:51:17.478+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:51:17.482+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:51:17.482+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:51:18.018+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:51:18.046+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:51:18.046+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:51:18.256+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:51:18.256+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:51:18.280+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 0.813 seconds
+[2025-04-17T20:51:48.886+0000] {processor.py:186} INFO - Started process (PID=1412) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:51:48.887+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:51:48.890+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:51:48.890+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:51:49.427+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:51:49.667+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:51:49.666+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:51:49.689+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:51:49.689+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:51:49.709+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 0.833 seconds
+[2025-04-17T20:52:20.194+0000] {processor.py:186} INFO - Started process (PID=1455) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:52:20.196+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:52:20.198+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:52:20.198+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:52:20.796+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:52:20.817+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:52:20.817+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:52:20.840+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:52:20.839+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:52:20.860+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 0.672 seconds
+[2025-04-17T20:52:51.452+0000] {processor.py:186} INFO - Started process (PID=1483) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:52:51.454+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:52:51.458+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:52:51.457+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:52:51.972+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:52:52.001+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:52:52.000+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:52:52.036+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:52:52.036+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:52:52.257+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 0.815 seconds
+[2025-04-17T20:53:23.318+0000] {processor.py:186} INFO - Started process (PID=1511) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:53:23.319+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:53:23.322+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:53:23.322+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:53:23.807+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:53:23.850+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:53:23.849+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:53:24.169+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:53:24.169+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:53:24.199+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 0.887 seconds
+[2025-04-17T20:53:54.785+0000] {processor.py:186} INFO - Started process (PID=1544) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:53:54.786+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:53:54.789+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:53:54.789+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:53:55.331+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:53:55.527+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:53:55.526+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:53:55.548+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:53:55.548+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:53:55.570+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 0.794 seconds
+[2025-04-17T20:54:26.071+0000] {processor.py:186} INFO - Started process (PID=1572) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:54:26.085+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:54:26.100+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:54:26.099+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:54:26.645+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:54:26.682+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:54:26.680+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:54:26.712+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:54:26.711+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:54:26.740+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 0.692 seconds
+[2025-04-17T20:54:57.580+0000] {processor.py:186} INFO - Started process (PID=1600) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:54:57.582+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:54:57.587+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:54:57.587+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:54:58.224+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:54:58.259+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:54:58.259+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:54:58.533+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:54:58.533+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:54:58.559+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 0.997 seconds
+[2025-04-17T20:55:28.803+0000] {processor.py:186} INFO - Started process (PID=1628) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:55:28.804+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:55:28.807+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:55:28.807+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:55:29.256+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:55:29.282+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:55:29.282+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:55:29.474+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:55:29.474+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:55:29.493+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 0.699 seconds
+[2025-04-17T20:55:59.619+0000] {processor.py:186} INFO - Started process (PID=1656) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:55:59.620+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:55:59.623+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:55:59.622+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:56:00.201+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:56:00.413+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:56:00.413+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:56:00.439+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:56:00.438+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:56:00.461+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 0.850 seconds
+[2025-04-17T20:56:30.724+0000] {processor.py:186} INFO - Started process (PID=1696) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:56:30.725+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:56:30.731+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:56:30.729+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:56:31.237+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:56:31.315+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:56:31.314+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:56:31.367+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:56:31.367+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:56:31.593+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 0.879 seconds
+[2025-04-17T20:57:01.825+0000] {processor.py:186} INFO - Started process (PID=1734) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:57:01.827+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:57:01.836+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:57:01.833+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:57:03.219+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:57:03.276+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:57:03.275+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:57:04.015+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:57:04.014+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:57:04.087+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 2.298 seconds
+[2025-04-17T20:57:34.672+0000] {processor.py:186} INFO - Started process (PID=1766) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:57:34.673+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:57:34.676+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:57:34.675+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:57:35.358+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:57:35.686+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:57:35.685+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:57:35.719+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:57:35.718+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:57:35.746+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 1.085 seconds
+[2025-04-17T20:58:06.679+0000] {processor.py:186} INFO - Started process (PID=1804) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:58:06.684+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:58:06.690+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:58:06.689+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:58:08.261+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:58:08.293+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:58:08.292+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:58:08.335+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:58:08.334+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:58:08.377+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 1.712 seconds
+[2025-04-17T20:58:38.836+0000] {processor.py:186} INFO - Started process (PID=1832) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:58:38.838+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:58:38.841+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:58:38.841+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:58:39.614+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:58:39.676+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:58:39.675+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:58:39.956+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:58:39.956+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:58:39.989+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 1.165 seconds
+[2025-04-17T20:59:10.425+0000] {processor.py:186} INFO - Started process (PID=1860) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:59:10.427+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:59:10.431+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:59:10.430+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:59:11.289+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:59:11.533+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:59:11.533+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:59:11.561+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:59:11.561+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:59:11.586+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 1.176 seconds
+[2025-04-17T20:59:42.052+0000] {processor.py:186} INFO - Started process (PID=1888) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:59:42.056+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T20:59:42.062+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:59:42.061+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:59:43.312+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T20:59:43.354+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:59:43.353+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T20:59:43.420+0000] {logging_mixin.py:190} INFO - [2025-04-17T20:59:43.419+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T20:59:43.450+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 1.415 seconds
+[2025-04-17T21:00:13.776+0000] {processor.py:186} INFO - Started process (PID=1922) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T21:00:13.786+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T21:00:13.789+0000] {logging_mixin.py:190} INFO - [2025-04-17T21:00:13.789+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T21:00:14.601+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T21:00:14.626+0000] {logging_mixin.py:190} INFO - [2025-04-17T21:00:14.626+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T21:00:14.663+0000] {logging_mixin.py:190} INFO - [2025-04-17T21:00:14.662+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T21:00:14.696+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 0.926 seconds
+[2025-04-17T21:00:45.063+0000] {processor.py:186} INFO - Started process (PID=1958) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T21:00:45.065+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T21:00:45.067+0000] {logging_mixin.py:190} INFO - [2025-04-17T21:00:45.067+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T21:00:45.964+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T21:00:46.059+0000] {logging_mixin.py:190} INFO - [2025-04-17T21:00:46.057+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T21:00:54.491+0000] {logging_mixin.py:190} INFO - [2025-04-17T21:00:54.490+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T21:00:55.066+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 10.012 seconds
+[2025-04-17T21:01:25.249+0000] {processor.py:186} INFO - Started process (PID=1985) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T21:01:25.251+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T21:01:25.265+0000] {logging_mixin.py:190} INFO - [2025-04-17T21:01:25.264+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T21:01:26.435+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T21:01:52.047+0000] {logging_mixin.py:190} INFO - [2025-04-17T21:01:52.045+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T21:01:52.138+0000] {logging_mixin.py:190} INFO - [2025-04-17T21:01:52.137+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T21:01:52.243+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 27.018 seconds
+[2025-04-17T21:02:23.044+0000] {processor.py:186} INFO - Started process (PID=2024) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T21:02:23.046+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T21:02:23.051+0000] {logging_mixin.py:190} INFO - [2025-04-17T21:02:23.050+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T21:02:24.784+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T21:02:24.809+0000] {logging_mixin.py:190} INFO - [2025-04-17T21:02:24.808+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T21:02:24.840+0000] {logging_mixin.py:190} INFO - [2025-04-17T21:02:24.839+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T21:02:24.877+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 1.861 seconds
+[2025-04-17T21:02:55.172+0000] {processor.py:186} INFO - Started process (PID=2068) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T21:02:55.175+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T21:02:55.178+0000] {logging_mixin.py:190} INFO - [2025-04-17T21:02:55.178+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T21:02:56.285+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T21:02:56.349+0000] {logging_mixin.py:190} INFO - [2025-04-17T21:02:56.348+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T21:02:56.413+0000] {logging_mixin.py:190} INFO - [2025-04-17T21:02:56.412+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T21:02:56.455+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 1.291 seconds
+[2025-04-17T21:03:26.790+0000] {processor.py:186} INFO - Started process (PID=2100) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T21:03:26.801+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T21:03:26.807+0000] {logging_mixin.py:190} INFO - [2025-04-17T21:03:26.806+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T21:03:27.800+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T21:03:28.135+0000] {logging_mixin.py:190} INFO - [2025-04-17T21:03:28.133+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T21:03:28.182+0000] {logging_mixin.py:190} INFO - [2025-04-17T21:03:28.182+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T21:03:28.205+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 1.439 seconds
+[2025-04-17T21:03:58.811+0000] {processor.py:186} INFO - Started process (PID=2129) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T21:03:58.812+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T21:03:58.815+0000] {logging_mixin.py:190} INFO - [2025-04-17T21:03:58.815+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T21:03:59.693+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T21:03:59.726+0000] {logging_mixin.py:190} INFO - [2025-04-17T21:03:59.725+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T21:03:59.764+0000] {logging_mixin.py:190} INFO - [2025-04-17T21:03:59.764+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T21:03:59.791+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 0.993 seconds
+[2025-04-17T21:04:30.400+0000] {processor.py:186} INFO - Started process (PID=2162) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T21:04:30.401+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T21:04:30.404+0000] {logging_mixin.py:190} INFO - [2025-04-17T21:04:30.404+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T21:04:31.506+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T21:04:31.536+0000] {logging_mixin.py:190} INFO - [2025-04-17T21:04:31.535+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T21:04:31.570+0000] {logging_mixin.py:190} INFO - [2025-04-17T21:04:31.570+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T21:04:31.607+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 1.215 seconds
+[2025-04-17T21:05:01.991+0000] {processor.py:186} INFO - Started process (PID=2196) to work on /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T21:05:01.992+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/first_stage/first_stage.py for tasks to queue
+[2025-04-17T21:05:01.996+0000] {logging_mixin.py:190} INFO - [2025-04-17T21:05:01.995+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T21:05:02.924+0000] {processor.py:925} INFO - DAG(s) 'gcs_dlt_data_pipeline' retrieved from /opt/airflow/dags/first_stage/first_stage.py
+[2025-04-17T21:05:02.963+0000] {logging_mixin.py:190} INFO - [2025-04-17T21:05:02.962+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-17T21:05:03.011+0000] {logging_mixin.py:190} INFO - [2025-04-17T21:05:03.010+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_dlt_data_pipeline to None, run_after=None
+[2025-04-17T21:05:03.039+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/first_stage/first_stage.py took 1.055 seconds

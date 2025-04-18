@@ -2,7 +2,7 @@
 
 ## Problem Description
 
-This project aims to analyze a subset of the airline on-time performance dataset from 1987 to 1992, which contains detailed flight arrival and departure information for all commercial flights within the United States during this period. The data is sourced from the RITA (Research and Innovative Technology Administration) and offers valuable insights into airline operations, delays, cancellations, and more.
+This project aims to analyze a subset of the airline on-time performance dataset from 1987 to 2007, which contains detailed flight arrival and departure information for all commercial flights within the United States during this period. The data is sourced from the RITA (Research and Innovative Technology Administration) and offers valuable insights into airline operations, delays, cancellations, and more.
 
 In this project, the primary goal is to analyze flight movements within the USA to gain insights into:
 
@@ -12,7 +12,7 @@ In this project, the primary goal is to analyze flight movements within the USA 
 
  - The most frequently used airports for both departures and arrivals, offering an understanding of the central hubs in the U.S. airline network.
 
-The dataset spans 5 years of operational data, covering millions of records, and provides a historical perspective on flight performance, delays, and cancellations. This analysis aims to uncover patterns that can inform future decision-making in airline operations, airport management, and policy-making regarding air travel.
+The dataset spans 20 years of operational data, covering millions of records, and provides a historical perspective on flight performance, delays, and cancellations. This analysis aims to uncover patterns that can inform future decision-making in airline operations, airport management, and policy-making regarding air travel.
 
 ### Key Insights:
 Flight operations within the USA
@@ -30,6 +30,8 @@ Trends in airline industry performance from 1987 to 1992, with a focus on the bu
 ## Tools & Technologies Used
 
 For this project, I leveraged the following tools:
+
+- **Kaggle**
 
 - **Google Cloud Platform (GCP)**: Primary cloud provider for hosting services, offering a range of managed solutions.
   
@@ -64,6 +66,7 @@ To run the project code, several steps and configurations are required.
 ### 1. Google Cloud Platform (GCP)
 
 Make sure the following prerequisites are completed:
+- Have an active account on Kaggle
 
 - Have an active account on **Google Cloud Platform (GCP)**.
 - Create a **Service Account**.
@@ -85,7 +88,6 @@ Make sure the following prerequisites are completed:
 - Save the JSON key in the following directories:
   - In the `terraform/` directory as: `gcs-key.json`
   - In the `airflow/config/` directory as: `gcs-key.json`
-
 ---
 
 ### 2. Terraform Setup
@@ -122,43 +124,9 @@ terraform plan
 terraform apply
 ```
 
-### 3. Downloading the Dataset
+-After that remember to set the variables `GCS_BUCKET_NAME` and `GCP_PROJECT_ID` in file `main_spark.py` with the the appropriate names you used in terraform.tfvars.
 
-The dataset used in this project is publicly available on the Harvard Dataverse platform:
-
-🔗 [Airline On-Time Performance Dataset (1987–1992)](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/HG7NV7)
-
-However, **direct download links are not available** via API or scripts. Therefore, the data for the years **1987 to 1992 must be downloaded manually** from the website.
-
-#### Instructions:
-
-1. Visit the dataset page:  
-   [https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/HG7NV7](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/HG7NV7)
-
-2. Download the `.csv` files for the following years:
-   - 1987
-   - 1988
-   - 1989
-   - 1990
-   - 1991
-   - 1992
-
-3. After downloading, upload all the files to the **`raw/` folder** in your **GCS bucket**, which was created using Terraform.
-
-   You can do this manually using the GCP Console or via the `gsutil` CLI. For example:
-
-   ```bash
-    gsutil cp <path-to-local-csv-file> gs://<your-bucket-name>/raw/
-   ```
-
-4. In addition to the flight data, the **`carriers.csv`** file must also be downloaded from the same dataset page:  
-Once downloaded, upload `carriers.csv` to the **`seeds/`** folder in your GCS bucket:
-
-```bash
-gsutil cp carriers.csv gs://<your-bucket-name>/seeds/
-```
-
-### 4. Airflow Setup
+### 3. Airflow Setup
 
 Before running Airflow, make sure to configure the appropriate environment variables in the `docker-compose.yaml` file. These variables are necessary for authenticating with GCP and enabling Airflow to communicate with Google Cloud services.
 
@@ -168,11 +136,14 @@ Inside your `docker-compose.yaml`, set the following:
 
 ```yaml
 environment:
-  - GOOGLE_APPLICATION_CREDENTIALS=/opt/airflow/config/gcp-key.json
-  - AIRFLOW_CONN_GOOGLE_CLOUD_DEFAULT=google-cloud://?key_path=%2Fopt%2Fairflow%2Fconfig%2Fgcp-key.json&project=<your-project-id>
-  - GCP_PROJECT_ID=<your-project-id>
-  - GCP_GCS_BUCKET=<your-gcs-bucket-name>
+  - GOOGLE_APPLICATION_CREDENTIALS: '/opt/airflow/config/gcp-key.json'
+  - AIRFLOW_CONN_GOOGLE_CLOUD_DEFAULT: 'google-cloud://?key_path=%2Fopt%2Fairflow%2Fconfig%2Fgcp-key.json&project=<your-project-id>'
+  - GCP_PROJECT_ID: '<your-project-id>'
+  - GCP_GCS_BUCKET: '<your-gcs-bucket-name>'
+  - KAGGLE_KEY: '<your-kaggle-api-key>'
+  - KAGGLE_USERNAME: '<your-kaggle-account-username>'
 ```
+You can find your API key from Kaggle in Profile settings, then download it, open the file and paste to docker-compose.yaml.
 
 Replace <your-project-id> and <your-gcs-bucket-name> with your actual project and bucket names. Do not use quotation marks in the YAML if your values are plain strings.
 
@@ -188,23 +159,32 @@ docker-compose up
 ```
 This will launch the Airflow webserver, scheduler, and any other defined services. You should be able to access the Airflow UI at http://localhost:8080.
 
-### 5. Airflow & DBT Workflow
+### 4. Airflow & DBT Workflow
 
 Once the infrastructure is deployed and raw data is uploaded to GCS, the data pipeline is orchestrated using **Airflow** with multiple DAGs handling each stage of the process.
 
-#### 1. `first_stage` DAG
+#### 1. `kaggle_to_gcs` DAG
 
-The first step in the pipeline is to trigger the `first_stage` DAG. This DAG performs the following tasks:
+The first step in the pipeline is to trigger the `kaggle_to_gcs` DAG. This DAG performs the following tasks:
 
-- Reads raw CSV files from the `raw/` folder in the GCS bucket.
+- Reads raw CSV files from the KAGGLE dataset.
 - Applies basic cleaning and transformation.
-- Writes the cleaned data into the `staging/` folder within the same GCS bucket.
+- Writes the cleaned data into the `raw/` folder to GCS bucket.
 
 This staging area serves as the intermediate zone before advanced processing and analytics.
 
 ---
 
-#### 2. `spark_job` DAG
+#### 2. `kaggle_seeds_to_gcs` DAG
+
+The second step in the pipeline is to trigger the `kaggle_seeds_to_gcs` DAG. This DAG performs the following tasks:
+
+- Reads raw CSV files from the KAGGLE dataset.
+- Writes the cleaned data into the `seeds/` folder to GCS bucket.
+
+---
+
+#### 3. `spark_job` DAG
 
 Once the data is staged, the `spark_job` DAG should be triggered. It performs the core transformation using a Spark job running on a Dataproc cluster.
 
@@ -236,7 +216,7 @@ This DAG is triggered **as the final step** in the pipeline after:
 
 The DAG runs the DBT CLI inside the container and builds models in the correct order based on their dependencies, ensuring that the final analytics tables in the marts/ layer are ready for consumption.
 
-### 6. Looker Studio
+### 5. Looker Studio
 
 ### Dashboard Presentation
 ![Map Image](img/my_dashboard.png)

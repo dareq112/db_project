@@ -1,3 +1,9 @@
+{{
+    config(
+        materialized='table'
+    )
+}}
+
 with flight_data as (
     select *
     from {{ ref('core_flights') }}

@@ -1,18 +1,17 @@
 import os
 from pyspark.sql import SparkSession
-from pyspark.sql.types import StructType, StructField, StringType, IntegerType, DateType, FloatType
-from pyspark.sql.functions import col, year, lpad, concat_ws, to_timestamp, to_date, format_string, substring, length
+from pyspark.sql.types import StructType, StructField, StringType, IntegerType, FloatType
+from pyspark.sql.functions import col, to_date, format_string
 import pyspark.sql.functions as F
 
-GCS_BUCKET_NAME = os.getenv('GCP_GCS_BUCKET')
-GCP_PROJECT_ID = os.getenv('GCP_PROJECT_ID')
-GOOGLE_CREDENTIALS = os.getenv('GOOGLE_APPLICATION_CREDENTIALS')
+GCS_BUCKET_NAME = '' #Your bucket name Bucket must be hard-coded as script is run in DataProc cluster
+GCP_PROJECT_ID = '' #Your project ID Project ID must be hard-coded as script is run in DataProc cluster
 
+print(GCS_BUCKET_NAME, GCP_PROJECT_ID)
 #Creating basic spark session
 spark = SparkSession.builder \
     .appName("Transform the data from GCS and save to BigQuery") \
-    .config("spark.hadoop.fs.gs.project.id", f"{GCP_PROJECT_ID}") \
-    .config("spark.hadoop.fs.gs.bucket", f"{GCS_BUCKET_NAME}") \
+    .config("spark.hadoop.fs.gs.project.id", GCP_PROJECT_ID) \
     .getOrCreate()
 
 #Preparing schema for staging data
@@ -45,26 +44,31 @@ carriers_schema = StructType([
 ])
 
 #Loading the data from GCS bucket staging folder
-df_staging = spark.read.csv(f'gs://{GCS_BUCKET_NAME}/staging/*.csv', schema=staging_schema, header=True)
+df_staging = spark.read.csv(f'gs://{GCS_BUCKET_NAME}/raw/*.csv', schema=staging_schema, header=True)
 
 #Loading the data from GCS bucket seeds folder carriers file
 df_seeds = spark.read.csv(f'gs://{GCS_BUCKET_NAME}/seeds/carriers.csv', schema=carriers_schema, header=True)
 
 df_transformed = df_staging \
     .withColumn("FlightDate", to_date(format_string("%04d-%02d-%02d", col("Year"), col("Month"), col("DayOfMonth")))) \
-    .withColumn("DepTimePadded", lpad(col("DepTime"), 4, "0")) \
     .withColumn("DepTimeFormatted",
-                   concat_ws(":",
-                             substring(col("DepTimePadded"), 1, 2),
-                             substring(col("DepTimePadded"), 3, 2)
-                   )) \
-    .withColumn("ArrTimePadded", lpad(col("ArrTime"), 4, "0")) \
+        F.when(
+            F.length("DepTime") == 3,
+            F.concat(F.lit("0"), F.substring("DepTime", 1, 1), F.lit(":"), F.substring("DepTime", 2, 2))
+        ).when(
+            F.length("DepTime") == 4,
+            F.concat(F.substring("DepTime", 1, 2), F.lit(":"), F.substring("DepTime", 3, 2))
+        )
+    ) \
     .withColumn("ArrTimeFormatted",
-                   concat_ws(":",
-                             substring(col("ArrTimePadded"), 1, 2),
-                             substring(col("ArrTimePadded"), 3, 2)
-                   )) \
-    .drop('ArrTimePadded', 'DepTimePadded')
+        F.when(
+            F.length("ArrTime") == 3,
+            F.concat(F.lit("0"), F.substring("ArrTime", 1, 1), F.lit(":"), F.substring("ArrTime", 2, 2))
+        ).when(
+            F.length("ArrTime") == 4,
+            F.concat(F.substring("ArrTime", 1, 2), F.lit(":"), F.substring("ArrTime", 3, 2))
+        )
+    ) \
 
 #Join carriers table to our transformed table
 df_joined = df_transformed.join(df_seeds, df_transformed["UniqueCarrier"] == df_seeds["CarrierCode"], how="inner")

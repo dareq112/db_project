@@ -8,6 +8,7 @@ dbt-bigquery==1.8.1  # Or use dbt-postgres, dbt-snowflake etc. based on your bac
 # Optional: Useful Airflow extras
 apache-airflow-providers-google==15.0.1 # if working with BigQuery, GCS etc.
 apache-airflow-providers-dbt-cloud==2.0.0  # if using DBT Cloud operator (optional)
+kaggle # for downloading the dataset
 
 # Optional: Dev tools
 pandas
