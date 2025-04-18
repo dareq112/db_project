@@ -1238,3 +1238,17 @@
 [2025-04-18T17:54:59.790+0000] {logging_mixin.py:190} INFO - [2025-04-18T17:54:59.789+0000] {dag.py:3239} INFO - Sync 1 DAGs
 [2025-04-18T17:54:59.834+0000] {logging_mixin.py:190} INFO - [2025-04-18T17:54:59.834+0000] {dag.py:4180} INFO - Setting next_dagrun for kaggle_seeds_to_gcs to None, run_after=None
 [2025-04-18T17:54:59.870+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kaggle_seeds_to_gcs.py took 0.357 seconds
+[2025-04-18T17:55:30.735+0000] {processor.py:186} INFO - Started process (PID=25806) to work on /opt/airflow/dags/kaggle_seeds_to_gcs.py
+[2025-04-18T17:55:30.736+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kaggle_seeds_to_gcs.py for tasks to queue
+[2025-04-18T17:55:30.738+0000] {logging_mixin.py:190} INFO - [2025-04-18T17:55:30.737+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kaggle_seeds_to_gcs.py
+[2025-04-18T17:55:30.992+0000] {processor.py:925} INFO - DAG(s) 'kaggle_seeds_to_gcs' retrieved from /opt/airflow/dags/kaggle_seeds_to_gcs.py
+[2025-04-18T17:55:31.024+0000] {logging_mixin.py:190} INFO - [2025-04-18T17:55:31.024+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-18T17:55:31.054+0000] {logging_mixin.py:190} INFO - [2025-04-18T17:55:31.054+0000] {dag.py:4180} INFO - Setting next_dagrun for kaggle_seeds_to_gcs to None, run_after=None
+[2025-04-18T17:55:31.072+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kaggle_seeds_to_gcs.py took 0.345 seconds
+[2025-04-18T17:56:01.511+0000] {processor.py:186} INFO - Started process (PID=25839) to work on /opt/airflow/dags/kaggle_seeds_to_gcs.py
+[2025-04-18T17:56:01.512+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kaggle_seeds_to_gcs.py for tasks to queue
+[2025-04-18T17:56:01.514+0000] {logging_mixin.py:190} INFO - [2025-04-18T17:56:01.513+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kaggle_seeds_to_gcs.py
+[2025-04-18T17:56:01.858+0000] {processor.py:925} INFO - DAG(s) 'kaggle_seeds_to_gcs' retrieved from /opt/airflow/dags/kaggle_seeds_to_gcs.py
+[2025-04-18T17:56:01.895+0000] {logging_mixin.py:190} INFO - [2025-04-18T17:56:01.894+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-18T17:56:01.930+0000] {logging_mixin.py:190} INFO - [2025-04-18T17:56:01.930+0000] {dag.py:4180} INFO - Setting next_dagrun for kaggle_seeds_to_gcs to None, run_after=None
+[2025-04-18T17:56:01.960+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kaggle_seeds_to_gcs.py took 0.460 seconds

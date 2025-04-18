@@ -1,3 +1,9 @@
+{{
+    config(
+        materialized='table'
+    )
+}}
+
 with delayed_departures as (
     select 
         dep_airport, 

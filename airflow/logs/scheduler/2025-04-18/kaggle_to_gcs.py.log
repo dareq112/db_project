@@ -5062,3 +5062,17 @@ Please take a look at these docs to improve your DAG import time:
 [2025-04-18T17:55:02.257+0000] {logging_mixin.py:190} INFO - [2025-04-18T17:55:02.257+0000] {dag.py:3239} INFO - Sync 1 DAGs
 [2025-04-18T17:55:02.280+0000] {logging_mixin.py:190} INFO - [2025-04-18T17:55:02.279+0000] {dag.py:4180} INFO - Setting next_dagrun for kaggle_to_gcs to None, run_after=None
 [2025-04-18T17:55:02.299+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kaggle_to_gcs.py took 0.824 seconds
+[2025-04-18T17:55:33.174+0000] {processor.py:186} INFO - Started process (PID=25822) to work on /opt/airflow/dags/kaggle_to_gcs.py
+[2025-04-18T17:55:33.175+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kaggle_to_gcs.py for tasks to queue
+[2025-04-18T17:55:33.176+0000] {logging_mixin.py:190} INFO - [2025-04-18T17:55:33.176+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kaggle_to_gcs.py
+[2025-04-18T17:55:33.884+0000] {processor.py:925} INFO - DAG(s) 'kaggle_to_gcs' retrieved from /opt/airflow/dags/kaggle_to_gcs.py
+[2025-04-18T17:55:33.906+0000] {logging_mixin.py:190} INFO - [2025-04-18T17:55:33.905+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-18T17:55:33.930+0000] {logging_mixin.py:190} INFO - [2025-04-18T17:55:33.930+0000] {dag.py:4180} INFO - Setting next_dagrun for kaggle_to_gcs to None, run_after=None
+[2025-04-18T17:55:33.950+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kaggle_to_gcs.py took 0.783 seconds
+[2025-04-18T17:56:04.682+0000] {processor.py:186} INFO - Started process (PID=25855) to work on /opt/airflow/dags/kaggle_to_gcs.py
+[2025-04-18T17:56:04.683+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kaggle_to_gcs.py for tasks to queue
+[2025-04-18T17:56:04.686+0000] {logging_mixin.py:190} INFO - [2025-04-18T17:56:04.685+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kaggle_to_gcs.py
+[2025-04-18T17:56:05.416+0000] {processor.py:925} INFO - DAG(s) 'kaggle_to_gcs' retrieved from /opt/airflow/dags/kaggle_to_gcs.py
+[2025-04-18T17:56:05.439+0000] {logging_mixin.py:190} INFO - [2025-04-18T17:56:05.438+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-18T17:56:05.461+0000] {logging_mixin.py:190} INFO - [2025-04-18T17:56:05.461+0000] {dag.py:4180} INFO - Setting next_dagrun for kaggle_to_gcs to None, run_after=None
+[2025-04-18T17:56:05.481+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kaggle_to_gcs.py took 0.805 seconds

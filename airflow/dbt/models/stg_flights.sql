@@ -10,6 +10,7 @@ with raw_data as (
 select
     {{ dbt_utils.generate_surrogate_key(['FlightDate', 'FlightNum', 'Origin']) }} as id,
     cast(FlightDate as date) as flight_date,
+    cast(FlightMonth as date) as flight_month,
     cast(concat(cast(FlightDate as varchar), ' ', DepTimeFormatted) as timestamp) as dep_time,
     cast(concat(cast(FlightDate as varchar), ' ', ArrTimeFormatted) as timestamp) as arr_time,
     cast(FlightNum as integer) as flight_num,
